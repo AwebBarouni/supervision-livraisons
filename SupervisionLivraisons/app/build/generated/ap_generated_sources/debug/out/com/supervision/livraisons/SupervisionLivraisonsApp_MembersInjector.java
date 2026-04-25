@@ -2,6 +2,7 @@
 package com.supervision.livraisons;
 
 import androidx.hilt.work.HiltWorkerFactory;
+import com.supervision.livraisons.network.EmergencyWebSocketManager;
 import dagger.MembersInjector;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.InjectedFieldSignature;
@@ -20,24 +21,35 @@ import javax.inject.Provider;
 public final class SupervisionLivraisonsApp_MembersInjector implements MembersInjector<SupervisionLivraisonsApp> {
   private final Provider<HiltWorkerFactory> workerFactoryProvider;
 
-  public SupervisionLivraisonsApp_MembersInjector(
-      Provider<HiltWorkerFactory> workerFactoryProvider) {
+  private final Provider<EmergencyWebSocketManager> emergencyWebSocketManagerProvider;
+
+  public SupervisionLivraisonsApp_MembersInjector(Provider<HiltWorkerFactory> workerFactoryProvider,
+      Provider<EmergencyWebSocketManager> emergencyWebSocketManagerProvider) {
     this.workerFactoryProvider = workerFactoryProvider;
+    this.emergencyWebSocketManagerProvider = emergencyWebSocketManagerProvider;
   }
 
   public static MembersInjector<SupervisionLivraisonsApp> create(
-      Provider<HiltWorkerFactory> workerFactoryProvider) {
-    return new SupervisionLivraisonsApp_MembersInjector(workerFactoryProvider);
+      Provider<HiltWorkerFactory> workerFactoryProvider,
+      Provider<EmergencyWebSocketManager> emergencyWebSocketManagerProvider) {
+    return new SupervisionLivraisonsApp_MembersInjector(workerFactoryProvider, emergencyWebSocketManagerProvider);
   }
 
   @Override
   public void injectMembers(SupervisionLivraisonsApp instance) {
     injectWorkerFactory(instance, workerFactoryProvider.get());
+    injectEmergencyWebSocketManager(instance, emergencyWebSocketManagerProvider.get());
   }
 
   @InjectedFieldSignature("com.supervision.livraisons.SupervisionLivraisonsApp.workerFactory")
   public static void injectWorkerFactory(SupervisionLivraisonsApp instance,
       HiltWorkerFactory workerFactory) {
     instance.workerFactory = workerFactory;
+  }
+
+  @InjectedFieldSignature("com.supervision.livraisons.SupervisionLivraisonsApp.emergencyWebSocketManager")
+  public static void injectEmergencyWebSocketManager(SupervisionLivraisonsApp instance,
+      EmergencyWebSocketManager emergencyWebSocketManager) {
+    instance.emergencyWebSocketManager = emergencyWebSocketManager;
   }
 }

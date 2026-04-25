@@ -2,6 +2,7 @@
 package com.supervision.livraisons.repository;
 
 import com.supervision.livraisons.data.local.DeliveryDao;
+import com.supervision.livraisons.data.local.MessageDao;
 import com.supervision.livraisons.network.ApiService;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
@@ -22,25 +23,29 @@ import javax.inject.Provider;
 public final class SyncRepository_Factory implements Factory<SyncRepository> {
   private final Provider<DeliveryDao> deliveryDaoProvider;
 
+  private final Provider<MessageDao> messageDaoProvider;
+
   private final Provider<ApiService> apiServiceProvider;
 
   public SyncRepository_Factory(Provider<DeliveryDao> deliveryDaoProvider,
-      Provider<ApiService> apiServiceProvider) {
+      Provider<MessageDao> messageDaoProvider, Provider<ApiService> apiServiceProvider) {
     this.deliveryDaoProvider = deliveryDaoProvider;
+    this.messageDaoProvider = messageDaoProvider;
     this.apiServiceProvider = apiServiceProvider;
   }
 
   @Override
   public SyncRepository get() {
-    return newInstance(deliveryDaoProvider.get(), apiServiceProvider.get());
+    return newInstance(deliveryDaoProvider.get(), messageDaoProvider.get(), apiServiceProvider.get());
   }
 
   public static SyncRepository_Factory create(Provider<DeliveryDao> deliveryDaoProvider,
-      Provider<ApiService> apiServiceProvider) {
-    return new SyncRepository_Factory(deliveryDaoProvider, apiServiceProvider);
+      Provider<MessageDao> messageDaoProvider, Provider<ApiService> apiServiceProvider) {
+    return new SyncRepository_Factory(deliveryDaoProvider, messageDaoProvider, apiServiceProvider);
   }
 
-  public static SyncRepository newInstance(DeliveryDao deliveryDao, ApiService apiService) {
-    return new SyncRepository(deliveryDao, apiService);
+  public static SyncRepository newInstance(DeliveryDao deliveryDao, MessageDao messageDao,
+      ApiService apiService) {
+    return new SyncRepository(deliveryDao, messageDao, apiService);
   }
 }
