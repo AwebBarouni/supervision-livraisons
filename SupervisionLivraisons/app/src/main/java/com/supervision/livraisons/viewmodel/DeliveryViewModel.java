@@ -72,13 +72,14 @@ public class DeliveryViewModel extends AndroidViewModel {
         return isLoading;
     }
 
-    public void loadTodayDeliveries(Context context) {
+    public void loadTodayDeliveries(Context context, Double lat, Double lng) {
         isLoading.setValue(true);
-        syncRepository.syncDailyDeliveries(SessionManager.getUserId(context), () -> isLoading.setValue(false));
+        syncRepository.syncDailyDeliveries(SessionManager.getUserId(context), lat, lng,
+                () -> isLoading.setValue(false));
     }
 
     public void loadAllDeliveries(Context context) {
-        loadTodayDeliveries(context);
+        loadTodayDeliveries(context, null, null);
     }
 
     public void loadDelivery(String id) {

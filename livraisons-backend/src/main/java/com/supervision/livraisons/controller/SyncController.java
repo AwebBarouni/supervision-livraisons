@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.supervision.livraisons.dto.SyncUpdateStatusRequest;
 import com.supervision.livraisons.dto.StartDaySyncResponse;
 import com.supervision.livraisons.model.Delivery;
+import com.supervision.livraisons.model.Message;
 import com.supervision.livraisons.service.SyncService;
 
 @RestController
@@ -41,10 +42,18 @@ public class SyncController {
     public List<Delivery> dailySync(@PathVariable String driverId,
                                     @RequestParam(required = false)
                                     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date,
+                                    @RequestParam(required = false) Double lat,
+                                    @RequestParam(required = false) Double lng,
                                     Authentication authentication) {
         String userId = currentUserId(authentication);
         String role = currentRole(authentication);
-        return syncService.getDailyDeliveries(driverId, date, userId, role);
+        return syncService.getDailyDeliveries(driverId, date, lat, lng, userId, role);
+    }
+
+    @GetMapping("/emergency-messages")
+    public List<Message> emergencyMessages(Authentication authentication) {
+        String userId = currentUserId(authentication);
+        return syncService.getEmergencyMessages(userId);
     }
 
     @PostMapping("/update-status")

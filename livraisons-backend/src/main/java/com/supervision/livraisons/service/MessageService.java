@@ -18,6 +18,7 @@ import com.supervision.livraisons.model.Message;
 import com.supervision.livraisons.model.User;
 import com.supervision.livraisons.repository.MessageRepository;
 import com.supervision.livraisons.repository.UserRepository;
+import com.supervision.livraisons.websocket.EmergencyWebSocketHandler;
 
 @Service
 public class MessageService {
@@ -26,10 +27,14 @@ public class MessageService {
 
     private final MessageRepository messageRepository;
     private final UserRepository userRepository;
+    private final EmergencyWebSocketHandler emergencyWebSocketHandler;
 
-    public MessageService(MessageRepository messageRepository, UserRepository userRepository) {
+    public MessageService(MessageRepository messageRepository,
+                          UserRepository userRepository,
+                          EmergencyWebSocketHandler emergencyWebSocketHandler) {
         this.messageRepository = messageRepository;
         this.userRepository = userRepository;
+        this.emergencyWebSocketHandler = emergencyWebSocketHandler;
     }
 
     public List<Map<String, Object>> getConversations(String currentUserId) {
@@ -120,7 +125,13 @@ public class MessageService {
         message.setRead(false);
         message.setTimestamp(new Date());
 
-        return messageRepository.save(message);
+        Message saved = messageRepository.save(message);
+
+        if (saved.isEmergency()) {
+            emergencyWebSocketHandler.pushEmergencyMessage(saved);
+        }
+
+        return saved;
     }
 
     public void markAsRead(String messageId, String currentUserId) {

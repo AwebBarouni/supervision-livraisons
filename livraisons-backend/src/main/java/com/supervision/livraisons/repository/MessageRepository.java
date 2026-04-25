@@ -19,4 +19,7 @@ public interface MessageRepository extends MongoRepository<Message, String> {
 
     @Query("{ '$or': [ { '$and': [ {'senderId': ?0}, {'receiverId': ?1} ] }, { '$and': [ {'senderId': ?1}, {'receiverId': ?0} ] } ] }")
     List<Message> findThreadMessages(String userA, String userB, Sort sort);
+
+    @Query("{ 'isEmergency': true, '$or': [ { 'receiverId': null }, { 'receiverId': ?0 }, { 'senderId': ?0 } ] }")
+    List<Message> findEmergencyMessagesForUser(String userId);
 }

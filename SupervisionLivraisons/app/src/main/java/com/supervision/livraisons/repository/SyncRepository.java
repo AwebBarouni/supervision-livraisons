@@ -9,8 +9,11 @@ import androidx.lifecycle.Transformations;
 
 import com.supervision.livraisons.data.local.DeliveryDao;
 import com.supervision.livraisons.data.local.DeliveryEntity;
+import com.supervision.livraisons.data.local.MessageDao;
+import com.supervision.livraisons.data.local.MessageEntity;
 import com.supervision.livraisons.dto.SyncUpdateStatusRequest;
 import com.supervision.livraisons.model.Delivery;
+import com.supervision.livraisons.model.Message;
 import com.supervision.livraisons.network.ApiService;
 import com.supervision.livraisons.util.Constants;
 
@@ -38,13 +41,15 @@ public class SyncRepository {
     public static final String LOCAL_STATUS_CLIENT_NOT_FOUND = "client_not_found";
 
     private final DeliveryDao deliveryDao;
+    private final MessageDao messageDao;
     private final ApiService apiService;
     private final ExecutorService ioExecutor;
     private final Handler mainHandler;
 
     @Inject
-    public SyncRepository(DeliveryDao deliveryDao, ApiService apiService) {
+    public SyncRepository(DeliveryDao deliveryDao, MessageDao messageDao, ApiService apiService) {
         this.deliveryDao = deliveryDao;
+        this.messageDao = messageDao;
         this.apiService = apiService;
         this.ioExecutor = Executors.newSingleThreadExecutor();
         this.mainHandler = new Handler(Looper.getMainLooper());
@@ -54,7 +59,7 @@ public class SyncRepository {
         return Transformations.map(deliveryDao.getAllDeliveries(), this::mapEntitiesToDeliveries);
     }
 
-    public void syncDailyDeliveries(String driverId, Runnable onDone) {
+    public void syncDailyDeliveries(String driverId, Double lat, Double lng, Runnable onDone) {
         if (TextUtils.isEmpty(driverId)) {
             if (onDone != null) {
                 onDone.run();
@@ -65,7 +70,7 @@ public class SyncRepository {
         ioExecutor.execute(() -> {
             try {
                 Response<List<Delivery>> response = apiService
-                        .getDailyDeliveries(driverId, LocalDate.now().toString())
+                        .getDailyDeliveries(driverId, LocalDate.now().toString(), lat, lng)
                         .execute();
 
                 if (response.isSuccessful() && response.body() != null) {
@@ -73,6 +78,8 @@ public class SyncRepository {
                     deliveryDao.clearAllDeliveries();
                     deliveryDao.insertDeliveries(entities);
                 }
+
+                syncEmergencyMessagesBlocking();
             } catch (IOException ignored) {
                 // Keep local cache untouched when offline.
             } finally {
@@ -89,8 +96,9 @@ public class SyncRepository {
         }
 
         try {
+            // Background worker has no location — backend returns schedule-ordered list.
             Response<List<Delivery>> response = apiService
-                    .getDailyDeliveries(driverId, LocalDate.now().toString())
+                    .getDailyDeliveries(driverId, LocalDate.now().toString(), null, null)
                     .execute();
 
             if (response.isSuccessful() && response.body() != null) {
@@ -98,8 +106,19 @@ public class SyncRepository {
                 deliveryDao.clearAllDeliveries();
                 deliveryDao.insertDeliveries(entities);
             }
+
+            syncEmergencyMessagesBlocking();
         } catch (IOException ignored) {
             // Keep local cache untouched when offline.
+        }
+    }
+
+    private void syncEmergencyMessagesBlocking() throws IOException {
+        Response<List<Message>> response = apiService.getEmergencyMessages().execute();
+        if (response.isSuccessful() && response.body() != null) {
+            List<MessageEntity> entities = mapMessagesToEntities(response.body());
+            messageDao.clearAllMessages();
+            messageDao.insertMessages(entities);
         }
     }
 
@@ -152,6 +171,27 @@ public class SyncRepository {
                     delivery.getClientPhone(),
                     delivery.getNotes(),
                     toLocalStatus(delivery.getStatus())
+            ));
+        }
+        return entities;
+    }
+
+    private List<MessageEntity> mapMessagesToEntities(List<Message> messages) {
+        if (messages == null || messages.isEmpty()) {
+            return Collections.emptyList();
+        }
+
+        List<MessageEntity> entities = new ArrayList<>();
+        for (Message message : messages) {
+            if (message == null || TextUtils.isEmpty(message.getId())) {
+                continue;
+            }
+            String ts = message.getTimestamp() != null ? message.getTimestamp().toString() : null;
+            entities.add(new MessageEntity(
+                    message.getId(),
+                    message.getSenderId(),
+                    message.getContent(),
+                    ts
             ));
         }
         return entities;

@@ -1,13 +1,20 @@
 package com.supervision.livraisons.ui.livreur;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.material.snackbar.Snackbar;
 import com.supervision.livraisons.R;
 import com.supervision.livraisons.adapter.DeliveryAdapter;
@@ -30,6 +37,16 @@ public class TodaysDeliveriesActivity extends AppCompatActivity {
     private ActivityTodaysDeliveriesBinding binding;
     private DeliveryViewModel viewModel;
     private DeliveryAdapter adapter;
+    private FusedLocationProviderClient fusedLocationClient;
+
+    private final ActivityResultLauncher<String> locationPermissionLauncher =
+            registerForActivityResult(new ActivityResultContracts.RequestPermission(), granted -> {
+                if (granted) {
+                    loadDeliveriesWithLocation();
+                } else {
+                    viewModel.loadTodayDeliveries(this, null, null);
+                }
+            });
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +55,7 @@ public class TodaysDeliveriesActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         viewModel = new ViewModelProvider(this).get(DeliveryViewModel.class);
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
         setupToolbar();
         setupRecycler();
@@ -48,7 +66,28 @@ public class TodaysDeliveriesActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        viewModel.loadTodayDeliveries(this);
+        requestLocationAndSync();
+    }
+
+    private void requestLocationAndSync() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                == PackageManager.PERMISSION_GRANTED) {
+            loadDeliveriesWithLocation();
+        } else {
+            locationPermissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION);
+        }
+    }
+
+    private void loadDeliveriesWithLocation() {
+        try {
+            fusedLocationClient.getLastLocation().addOnSuccessListener(location -> {
+                Double lat = location != null ? location.getLatitude() : null;
+                Double lng = location != null ? location.getLongitude() : null;
+                viewModel.loadTodayDeliveries(this, lat, lng);
+            }).addOnFailureListener(e -> viewModel.loadTodayDeliveries(this, null, null));
+        } catch (SecurityException e) {
+            viewModel.loadTodayDeliveries(this, null, null);
+        }
     }
 
     private void setupToolbar() {

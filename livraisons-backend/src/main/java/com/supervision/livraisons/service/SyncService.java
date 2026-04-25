@@ -21,6 +21,7 @@ import com.supervision.livraisons.model.Message;
 import com.supervision.livraisons.model.User;
 import com.supervision.livraisons.repository.DeliveryRepository;
 import com.supervision.livraisons.repository.MessageRepository;
+import com.supervision.livraisons.util.RouteOptimizer;
 
 @Service
 public class SyncService {
@@ -66,7 +67,9 @@ public class SyncService {
         return new StartDaySyncResponse(new Date(), me, deliveries, mergedMessages);
     }
 
-    public List<Delivery> getDailyDeliveries(String driverId, LocalDate date, String requesterId, String role) {
+    public List<Delivery> getDailyDeliveries(String driverId, LocalDate date,
+                                             Double driverLat, Double driverLng,
+                                             String requesterId, String role) {
         if (!StringUtils.hasText(driverId)) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Le driverId est obligatoire");
         }
@@ -83,7 +86,14 @@ public class SyncService {
         Date start = Date.from(targetDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
         Date end = Date.from(targetDate.plusDays(1).atStartOfDay(ZoneId.systemDefault()).toInstant());
 
-        return deliveryRepository.findByAssignedLivreurIdAndScheduledTimeBetweenOrderByScheduledTimeAsc(driverId, start, end);
+        List<Delivery> deliveries = deliveryRepository
+                .findByAssignedLivreurIdAndScheduledTimeBetweenOrderByScheduledTimeAsc(driverId, start, end);
+
+        if (driverLat != null && driverLng != null) {
+            deliveries = RouteOptimizer.optimize(deliveries, driverLat, driverLng);
+        }
+
+        return deliveries;
     }
 
     public Delivery updateStatusFromSync(SyncUpdateStatusRequest request, String requesterId, String role) {
@@ -108,6 +118,10 @@ public class SyncService {
         }
 
         return deliveryRepository.save(delivery);
+    }
+
+    public List<Message> getEmergencyMessages(String userId) {
+        return messageRepository.findEmergencyMessagesForUser(userId);
     }
 
     public List<Delivery> emergencyClientSearch(String query) {

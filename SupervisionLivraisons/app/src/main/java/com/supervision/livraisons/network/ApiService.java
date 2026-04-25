@@ -60,7 +60,13 @@ public interface ApiService {
     Call<Void> markAsRead(@Path("id") String id);
 
     @GET("sync/daily/{driverId}")
-    Call<List<Delivery>> getDailyDeliveries(@Path("driverId") String driverId, @Query("date") String date);
+    Call<List<Delivery>> getDailyDeliveries(@Path("driverId") String driverId,
+                                            @Query("date") String date,
+                                            @Query("lat") Double lat,
+                                            @Query("lng") Double lng);
+
+    @GET("sync/emergency-messages")
+    Call<List<Message>> getEmergencyMessages();
 
     @POST("sync/update-status")
     Call<Delivery> updateStatusViaSync(@Body SyncUpdateStatusRequest request);
