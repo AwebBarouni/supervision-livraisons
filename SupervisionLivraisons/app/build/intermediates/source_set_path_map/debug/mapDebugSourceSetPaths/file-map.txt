@@ -1,0 +1,59 @@
+com.supervision.livraisons.app-work-runtime-2.9.1-0 C:\Users\MSI\.gradle\caches\8.11.1\transforms\04b3c3594226e8f791a6fe3d4bd0e1e9\transformed\work-runtime-2.9.1\res
+com.supervision.livraisons.app-emoji2-1.3.0-1 C:\Users\MSI\.gradle\caches\8.11.1\transforms\0596783efb2e2c77ae03ac25b318f230\transformed\emoji2-1.3.0\res
+com.supervision.livraisons.app-lifecycle-viewmodel-ktx-2.7.0-2 C:\Users\MSI\.gradle\caches\8.11.1\transforms\06e45dfdcf739606f420271080891ac3\transformed\lifecycle-viewmodel-ktx-2.7.0\res
+com.supervision.livraisons.app-fragment-ktx-1.7.1-3 C:\Users\MSI\.gradle\caches\8.11.1\transforms\0da32e8c1a574825e087e4ecdcd82240\transformed\fragment-ktx-1.7.1\res
+com.supervision.livraisons.app-window-1.0.0-4 C:\Users\MSI\.gradle\caches\8.11.1\transforms\0f36c1cdd31097fd58d736444f2945ac\transformed\window-1.0.0\res
+com.supervision.livraisons.app-navigation-common-2.7.7-5 C:\Users\MSI\.gradle\caches\8.11.1\transforms\179ca495493bc22306bd26b7b21799a1\transformed\navigation-common-2.7.7\res
+com.supervision.livraisons.app-room-runtime-2.6.1-6 C:\Users\MSI\.gradle\caches\8.11.1\transforms\22e4cc08b1f6769111f161c4c739cca6\transformed\room-runtime-2.6.1\res
+com.supervision.livraisons.app-lifecycle-viewmodel-savedstate-2.7.0-7 C:\Users\MSI\.gradle\caches\8.11.1\transforms\29e154a9459f41e13765fba056e61b98\transformed\lifecycle-viewmodel-savedstate-2.7.0\res
+com.supervision.livraisons.app-navigation-ui-2.7.7-8 C:\Users\MSI\.gradle\caches\8.11.1\transforms\2d656c2ac7c8d84771945f18bc9932c4\transformed\navigation-ui-2.7.7\res
+com.supervision.livraisons.app-activity-ktx-1.9.0-9 C:\Users\MSI\.gradle\caches\8.11.1\transforms\2dd2724f655cfd198fe48092efeba065\transformed\activity-ktx-1.9.0\res
+com.supervision.livraisons.app-startup-runtime-1.1.1-10 C:\Users\MSI\.gradle\caches\8.11.1\transforms\2e3f61c6e623b1738673ac417bbb9aca\transformed\startup-runtime-1.1.1\res
+com.supervision.livraisons.app-lifecycle-livedata-2.7.0-11 C:\Users\MSI\.gradle\caches\8.11.1\transforms\3092c63312b8395815b5846e8dce8e14\transformed\lifecycle-livedata-2.7.0\res
+com.supervision.livraisons.app-hilt-work-1.2.0-12 C:\Users\MSI\.gradle\caches\8.11.1\transforms\317a085e5c344c9b0e6add819559282f\transformed\hilt-work-1.2.0\res
+com.supervision.livraisons.app-appcompat-1.7.0-13 C:\Users\MSI\.gradle\caches\8.11.1\transforms\388215492ca90c47c1528f240465cd09\transformed\appcompat-1.7.0\res
+com.supervision.livraisons.app-glide-4.16.0-14 C:\Users\MSI\.gradle\caches\8.11.1\transforms\3bb040704097ed28ff5b1a7bd2362b45\transformed\glide-4.16.0\res
+com.supervision.livraisons.app-drawerlayout-1.1.1-15 C:\Users\MSI\.gradle\caches\8.11.1\transforms\4f724dda321283f8f184f54bae101d05\transformed\drawerlayout-1.1.1\res
+com.supervision.livraisons.app-lifecycle-livedata-core-ktx-2.7.0-16 C:\Users\MSI\.gradle\caches\8.11.1\transforms\507967fa06ee65759ff2444ac1affa21\transformed\lifecycle-livedata-core-ktx-2.7.0\res
+com.supervision.livraisons.app-core-runtime-2.2.0-17 C:\Users\MSI\.gradle\caches\8.11.1\transforms\5540c2d857bc141ecdb397d723e6f032\transformed\core-runtime-2.2.0\res
+com.supervision.livraisons.app-recyclerview-1.3.2-18 C:\Users\MSI\.gradle\caches\8.11.1\transforms\56e9bc6d712fba28921ba3e03f2b599d\transformed\recyclerview-1.3.2\res
+com.supervision.livraisons.app-appcompat-resources-1.7.0-19 C:\Users\MSI\.gradle\caches\8.11.1\transforms\57da09b84d30924ae17d80170ee1dd91\transformed\appcompat-resources-1.7.0\res
+com.supervision.livraisons.app-lifecycle-viewmodel-2.7.0-20 C:\Users\MSI\.gradle\caches\8.11.1\transforms\61f948ceb98627a08e7f8fe16894950e\transformed\lifecycle-viewmodel-2.7.0\res
+com.supervision.livraisons.app-viewpager2-1.1.0-beta02-21 C:\Users\MSI\.gradle\caches\8.11.1\transforms\643923247c9c660c95b7481afcd14b90\transformed\viewpager2-1.1.0-beta02\res
+com.supervision.livraisons.app-play-services-maps-18.2.0-22 C:\Users\MSI\.gradle\caches\8.11.1\transforms\66d73c5a3d2f72e78b95dbcd94425bf7\transformed\play-services-maps-18.2.0\res
+com.supervision.livraisons.app-emoji2-views-helper-1.3.0-23 C:\Users\MSI\.gradle\caches\8.11.1\transforms\66f49941847a278fd703132d18bf4f8c\transformed\emoji2-views-helper-1.3.0\res
+com.supervision.livraisons.app-constraintlayout-2.1.4-24 C:\Users\MSI\.gradle\caches\8.11.1\transforms\6f4854c1779b00a1064b69ae49de3c70\transformed\constraintlayout-2.1.4\res
+com.supervision.livraisons.app-slidingpanelayout-1.2.0-25 C:\Users\MSI\.gradle\caches\8.11.1\transforms\76e12919e28664b61c1e77da7b676e5d\transformed\slidingpanelayout-1.2.0\res
+com.supervision.livraisons.app-savedstate-ktx-1.2.1-26 C:\Users\MSI\.gradle\caches\8.11.1\transforms\7f2d2b429b68715e1b15c36ce181bb94\transformed\savedstate-ktx-1.2.1\res
+com.supervision.livraisons.app-customview-poolingcontainer-1.0.0-27 C:\Users\MSI\.gradle\caches\8.11.1\transforms\84f2e69a7eaa422f8a583a1ea0d33a47\transformed\customview-poolingcontainer-1.0.0\res
+com.supervision.livraisons.app-sqlite-2.4.0-28 C:\Users\MSI\.gradle\caches\8.11.1\transforms\91e809f516823bc4d7e037626fa45224\transformed\sqlite-2.4.0\res
+com.supervision.livraisons.app-core-1.13.0-29 C:\Users\MSI\.gradle\caches\8.11.1\transforms\9463649d11e16760927952211000d427\transformed\core-1.13.0\res
+com.supervision.livraisons.app-annotation-experimental-1.4.0-30 C:\Users\MSI\.gradle\caches\8.11.1\transforms\94a89f60f56a88b90c3b13be663b0317\transformed\annotation-experimental-1.4.0\res
+com.supervision.livraisons.app-cardview-1.0.0-31 C:\Users\MSI\.gradle\caches\8.11.1\transforms\94f5bc21d802785d1e22ddad33d62da0\transformed\cardview-1.0.0\res
+com.supervision.livraisons.app-transition-1.5.0-32 C:\Users\MSI\.gradle\caches\8.11.1\transforms\9503e0f7917a84ff899e84c3c7f597bd\transformed\transition-1.5.0\res
+com.supervision.livraisons.app-lifecycle-livedata-core-2.7.0-33 C:\Users\MSI\.gradle\caches\8.11.1\transforms\9c85a7c5f9073b4829b03140a80950ea\transformed\lifecycle-livedata-core-2.7.0\res
+com.supervision.livraisons.app-swiperefreshlayout-1.1.0-34 C:\Users\MSI\.gradle\caches\8.11.1\transforms\a076e1fcc24d3d3e9df41d711f7d6512\transformed\swiperefreshlayout-1.1.0\res
+com.supervision.livraisons.app-lifecycle-runtime-2.7.0-35 C:\Users\MSI\.gradle\caches\8.11.1\transforms\a3abe0db9539249a9b12d5c48c4f1238\transformed\lifecycle-runtime-2.7.0\res
+com.supervision.livraisons.app-profileinstaller-1.3.1-36 C:\Users\MSI\.gradle\caches\8.11.1\transforms\a5afba57f25512a48953043402cbef71\transformed\profileinstaller-1.3.1\res
+com.supervision.livraisons.app-coordinatorlayout-1.1.0-37 C:\Users\MSI\.gradle\caches\8.11.1\transforms\b7d717ec94edb5e0875d076abbaa3866\transformed\coordinatorlayout-1.1.0\res
+com.supervision.livraisons.app-material-1.12.0-38 C:\Users\MSI\.gradle\caches\8.11.1\transforms\c56a873fb51b2d386f90917fdac73ee5\transformed\material-1.12.0\res
+com.supervision.livraisons.app-lifecycle-runtime-ktx-2.7.0-39 C:\Users\MSI\.gradle\caches\8.11.1\transforms\c7581e812ac5efad8f05fefbce63ba4c\transformed\lifecycle-runtime-ktx-2.7.0\res
+com.supervision.livraisons.app-lifecycle-service-2.7.0-40 C:\Users\MSI\.gradle\caches\8.11.1\transforms\ccd2f5830e08c9a302aed1d0fc4bd494\transformed\lifecycle-service-2.7.0\res
+com.supervision.livraisons.app-play-services-base-18.0.1-41 C:\Users\MSI\.gradle\caches\8.11.1\transforms\d0e02643c7836780ff4aae5338b97cba\transformed\play-services-base-18.0.1\res
+com.supervision.livraisons.app-activity-1.9.0-42 C:\Users\MSI\.gradle\caches\8.11.1\transforms\da64421e93a374d4dd5f41900f191a6f\transformed\activity-1.9.0\res
+com.supervision.livraisons.app-navigation-fragment-2.7.7-43 C:\Users\MSI\.gradle\caches\8.11.1\transforms\dad3ea71018cd225bc565fe5059dcda5\transformed\navigation-fragment-2.7.7\res
+com.supervision.livraisons.app-core-ktx-1.13.0-44 C:\Users\MSI\.gradle\caches\8.11.1\transforms\dc9cdbf0bbfbe8868e8090599c9eb4fd\transformed\core-ktx-1.13.0\res
+com.supervision.livraisons.app-fragment-1.7.1-45 C:\Users\MSI\.gradle\caches\8.11.1\transforms\dca2d85307626fab48668cbbfd913134\transformed\fragment-1.7.1\res
+com.supervision.livraisons.app-savedstate-1.2.1-46 C:\Users\MSI\.gradle\caches\8.11.1\transforms\e43c1f0fcb17f26e535669a50fef0872\transformed\savedstate-1.2.1\res
+com.supervision.livraisons.app-play-services-basement-18.0.0-47 C:\Users\MSI\.gradle\caches\8.11.1\transforms\ea9310a8cf15bacacc30124b0ca59c67\transformed\play-services-basement-18.0.0\res
+com.supervision.livraisons.app-navigation-runtime-2.7.7-48 C:\Users\MSI\.gradle\caches\8.11.1\transforms\eed22157a01a5c132f90ecd8b2554386\transformed\navigation-runtime-2.7.7\res
+com.supervision.livraisons.app-room-ktx-2.6.1-49 C:\Users\MSI\.gradle\caches\8.11.1\transforms\f093341e0480eeb3bc4379c694f5729c\transformed\room-ktx-2.6.1\res
+com.supervision.livraisons.app-sqlite-framework-2.4.0-50 C:\Users\MSI\.gradle\caches\8.11.1\transforms\f6b2827679d86e015c8cde2cc0b3f124\transformed\sqlite-framework-2.4.0\res
+com.supervision.livraisons.app-lifecycle-process-2.7.0-51 C:\Users\MSI\.gradle\caches\8.11.1\transforms\ff5b4ede95bb52aedb6217702da990d9\transformed\lifecycle-process-2.7.0\res
+com.supervision.livraisons.app-pngs-52 C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\build\generated\res\pngs\debug
+com.supervision.livraisons.app-resValues-53 C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\build\generated\res\resValues\debug
+com.supervision.livraisons.app-packageDebugResources-54 C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.supervision.livraisons.app-packageDebugResources-55 C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.supervision.livraisons.app-debug-56 C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.supervision.livraisons.app-debug-57 C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\debug\res
+com.supervision.livraisons.app-main-58 C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\res
