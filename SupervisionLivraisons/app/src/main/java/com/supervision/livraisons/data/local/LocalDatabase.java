@@ -12,7 +12,7 @@ public abstract class LocalDatabase extends RoomDatabase {
     public abstract DeliveryDao deliveryDao();
     public abstract MessageDao messageDao();
 
-    static final Migration MIGRATION_1_2 = new Migration(1, 2) {
+    public static final Migration MIGRATION_1_2 = new Migration(1, 2) {
         @Override
         public void migrate(@NonNull SupportSQLiteDatabase database) {
             database.execSQL(
