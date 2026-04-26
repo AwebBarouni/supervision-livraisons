@@ -22,7 +22,7 @@ public class EmergencyController {
     }
 
     @GetMapping("/client-search")
-    @PreAuthorize("hasAuthority('ROLE_DRIVER')")
+    @PreAuthorize("hasAuthority('ROLE_LIVREUR')")
     public List<Delivery> clientSearch(@RequestParam String query) {
         return syncService.emergencyClientSearch(query);
     }
