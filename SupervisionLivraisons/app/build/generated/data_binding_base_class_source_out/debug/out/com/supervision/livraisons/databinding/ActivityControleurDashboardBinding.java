@@ -37,6 +37,9 @@ public final class ActivityControleurDashboardBinding implements ViewBinding {
   public final LinearLayout containerLivreurs;
 
   @NonNull
+  public final FloatingActionButton fabAddUser;
+
+  @NonNull
   public final FloatingActionButton fabEmergency;
 
   @NonNull
@@ -65,15 +68,17 @@ public final class ActivityControleurDashboardBinding implements ViewBinding {
 
   private ActivityControleurDashboardBinding(@NonNull ConstraintLayout rootView,
       @NonNull BarChart barChart, @NonNull BottomNavigationView bottomNav,
-      @NonNull LinearLayout containerLivreurs, @NonNull FloatingActionButton fabEmergency,
-      @NonNull ProgressBar progressBar, @NonNull ScrollView scrollView,
-      @NonNull GridLayout statsGrid, @NonNull MaterialToolbar toolbar,
-      @NonNull TextView tvDeliveredStat, @NonNull TextView tvFailedStat,
-      @NonNull TextView tvInProgressStat, @NonNull TextView tvTotalStat) {
+      @NonNull LinearLayout containerLivreurs, @NonNull FloatingActionButton fabAddUser,
+      @NonNull FloatingActionButton fabEmergency, @NonNull ProgressBar progressBar,
+      @NonNull ScrollView scrollView, @NonNull GridLayout statsGrid,
+      @NonNull MaterialToolbar toolbar, @NonNull TextView tvDeliveredStat,
+      @NonNull TextView tvFailedStat, @NonNull TextView tvInProgressStat,
+      @NonNull TextView tvTotalStat) {
     this.rootView = rootView;
     this.barChart = barChart;
     this.bottomNav = bottomNav;
     this.containerLivreurs = containerLivreurs;
+    this.fabAddUser = fabAddUser;
     this.fabEmergency = fabEmergency;
     this.progressBar = progressBar;
     this.scrollView = scrollView;
@@ -127,6 +132,12 @@ public final class ActivityControleurDashboardBinding implements ViewBinding {
       id = R.id.containerLivreurs;
       LinearLayout containerLivreurs = ViewBindings.findChildViewById(rootView, id);
       if (containerLivreurs == null) {
+        break missingId;
+      }
+
+      id = R.id.fabAddUser;
+      FloatingActionButton fabAddUser = ViewBindings.findChildViewById(rootView, id);
+      if (fabAddUser == null) {
         break missingId;
       }
 
@@ -185,8 +196,8 @@ public final class ActivityControleurDashboardBinding implements ViewBinding {
       }
 
       return new ActivityControleurDashboardBinding((ConstraintLayout) rootView, barChart,
-          bottomNav, containerLivreurs, fabEmergency, progressBar, scrollView, statsGrid, toolbar,
-          tvDeliveredStat, tvFailedStat, tvInProgressStat, tvTotalStat);
+          bottomNav, containerLivreurs, fabAddUser, fabEmergency, progressBar, scrollView,
+          statsGrid, toolbar, tvDeliveredStat, tvFailedStat, tvInProgressStat, tvTotalStat);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -44,6 +44,7 @@ drawable ic_home
 drawable ic_launcher_foreground
 drawable ic_message
 drawable ic_person
+drawable ic_phone
 drawable ic_search
 drawable ic_warning
 id action_logout
@@ -53,6 +54,8 @@ id bottomBar
 id bottomNav
 id btnConfirm
 id btnLogin
+id btnOpenMaps
+id btnSave
 id btnSend
 id btnSendEmergency
 id btnUpdateStatus
@@ -62,12 +65,15 @@ id divider
 id etEmail
 id etEmergencyMessage
 id etMessage
+id etName
 id etNotes
 id etPassword
+id fabAddUser
 id fabEmergency
 id fabNewConversation
 id ivAvatar
 id ivWarning
+id layoutRole
 id loginRoot
 id mapContainer
 id nav_accueil
@@ -77,10 +83,13 @@ id nav_livreurs
 id nav_messages
 id nav_profil
 id progressBar
+id rbControleur
 id rbEchoue
 id rbEnCours
 id rbLivre
+id rbLivreur
 id recyclerView
+id rgRole
 id rgStatus
 id scrollContent
 id scrollView
@@ -91,6 +100,7 @@ id statsGrid
 id tabLayout
 id tilEmail
 id tilEmergencyMessage
+id tilName
 id tilNotes
 id tilPassword
 id toolbar
@@ -98,6 +108,7 @@ id tvAddress
 id tvAddressSummary
 id tvAddressValue
 id tvAppName
+id tvAvatar
 id tvAvatarInitial
 id tvClientName
 id tvClientSummary
@@ -124,6 +135,7 @@ id tvTimestamp
 id tvTotalStat
 id tvTotalValue
 id tvUnreadBadge
+id tvUserRole
 id viewStatusBar
 layout activity_all_deliveries
 layout activity_controleur_dashboard
@@ -135,6 +147,7 @@ layout activity_messaging_screen
 layout activity_search_screen
 layout activity_todays_deliveries
 layout activity_update_delivery_status
+layout activity_user_profile
 layout item_conversation
 layout item_delivery
 layout item_message_received
@@ -150,6 +163,8 @@ string btn_cancel
 string btn_confirm
 string btn_login
 string btn_logout
+string btn_open_maps
+string btn_save
 string btn_send
 string btn_update_status
 string confirm_emergency
@@ -166,6 +181,8 @@ string failure_other
 string failure_refus
 string hint_email
 string hint_message
+string hint_name
+string hint_new_password
 string hint_password
 string hint_search
 string label_active
@@ -182,6 +199,7 @@ string label_non_lu
 string label_notes
 string label_order
 string label_phone
+string label_role
 string label_total
 string login_title
 string logo_initials
@@ -195,6 +213,9 @@ string nav_livreurs
 string nav_messages
 string nav_profil
 string placeholder_name
+string profile_saved
+string role_controleur
+string role_livreur
 string select_receiver
 string status_echoue
 string status_en_attente
@@ -213,6 +234,7 @@ string title_dashboard
 string title_delivery_detail
 string title_emergency
 string title_messages
+string title_new_user
 string title_profile
 string title_search
 string title_today_deliveries

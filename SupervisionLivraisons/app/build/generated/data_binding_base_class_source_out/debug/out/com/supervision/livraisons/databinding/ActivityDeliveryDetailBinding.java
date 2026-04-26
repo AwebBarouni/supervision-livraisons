@@ -25,6 +25,9 @@ public final class ActivityDeliveryDetailBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final MaterialButton btnOpenMaps;
+
+  @NonNull
   public final MaterialButton btnUpdateStatus;
 
   @NonNull
@@ -52,19 +55,20 @@ public final class ActivityDeliveryDetailBinding implements ViewBinding {
   public final TextView tvOrderValue;
 
   @NonNull
-  public final TextView tvPhoneValue;
+  public final MaterialButton tvPhoneValue;
 
   @NonNull
   public final TextView tvStatusBadge;
 
   private ActivityDeliveryDetailBinding(@NonNull ConstraintLayout rootView,
-      @NonNull MaterialButton btnUpdateStatus, @NonNull FragmentContainerView mapContainer,
-      @NonNull ProgressBar progressBar, @NonNull ScrollView scrollContent,
-      @NonNull MaterialToolbar toolbar, @NonNull TextView tvAddressValue,
-      @NonNull TextView tvClientValue, @NonNull TextView tvNotesValue,
-      @NonNull TextView tvOrderValue, @NonNull TextView tvPhoneValue,
-      @NonNull TextView tvStatusBadge) {
+      @NonNull MaterialButton btnOpenMaps, @NonNull MaterialButton btnUpdateStatus,
+      @NonNull FragmentContainerView mapContainer, @NonNull ProgressBar progressBar,
+      @NonNull ScrollView scrollContent, @NonNull MaterialToolbar toolbar,
+      @NonNull TextView tvAddressValue, @NonNull TextView tvClientValue,
+      @NonNull TextView tvNotesValue, @NonNull TextView tvOrderValue,
+      @NonNull MaterialButton tvPhoneValue, @NonNull TextView tvStatusBadge) {
     this.rootView = rootView;
+    this.btnOpenMaps = btnOpenMaps;
     this.btnUpdateStatus = btnUpdateStatus;
     this.mapContainer = mapContainer;
     this.progressBar = progressBar;
@@ -105,6 +109,12 @@ public final class ActivityDeliveryDetailBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnOpenMaps;
+      MaterialButton btnOpenMaps = ViewBindings.findChildViewById(rootView, id);
+      if (btnOpenMaps == null) {
+        break missingId;
+      }
+
       id = R.id.btnUpdateStatus;
       MaterialButton btnUpdateStatus = ViewBindings.findChildViewById(rootView, id);
       if (btnUpdateStatus == null) {
@@ -160,7 +170,7 @@ public final class ActivityDeliveryDetailBinding implements ViewBinding {
       }
 
       id = R.id.tvPhoneValue;
-      TextView tvPhoneValue = ViewBindings.findChildViewById(rootView, id);
+      MaterialButton tvPhoneValue = ViewBindings.findChildViewById(rootView, id);
       if (tvPhoneValue == null) {
         break missingId;
       }
@@ -171,9 +181,9 @@ public final class ActivityDeliveryDetailBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityDeliveryDetailBinding((ConstraintLayout) rootView, btnUpdateStatus,
-          mapContainer, progressBar, scrollContent, toolbar, tvAddressValue, tvClientValue,
-          tvNotesValue, tvOrderValue, tvPhoneValue, tvStatusBadge);
+      return new ActivityDeliveryDetailBinding((ConstraintLayout) rootView, btnOpenMaps,
+          btnUpdateStatus, mapContainer, progressBar, scrollContent, toolbar, tvAddressValue,
+          tvClientValue, tvNotesValue, tvOrderValue, tvPhoneValue, tvStatusBadge);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

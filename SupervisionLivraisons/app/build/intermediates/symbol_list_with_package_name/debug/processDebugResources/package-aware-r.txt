@@ -3173,6 +3173,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_person
+drawable ic_phone
 drawable ic_search
 drawable ic_search_black_24
 drawable ic_warning
@@ -3360,6 +3361,8 @@ id bounceEnd
 id bounceStart
 id btnConfirm
 id btnLogin
+id btnOpenMaps
+id btnSave
 id btnSend
 id btnSendEmergency
 id btnUpdateStatus
@@ -3452,11 +3455,13 @@ id escape
 id etEmail
 id etEmergencyMessage
 id etMessage
+id etName
 id etNotes
 id etPassword
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fabAddUser
 id fabEmergency
 id fabNewConversation
 id fade
@@ -3515,6 +3520,7 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id layoutRole
 id left
 id leftToRight
 id legacy
@@ -3655,13 +3661,16 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id rbControleur
 id rbEchoue
 id rbEnCours
 id rbLivre
+id rbLivreur
 id rectangles
 id recyclerView
 id report_drawn
 id reverseSawtooth
+id rgRole
 id rgStatus
 id right
 id rightToLeft
@@ -3773,6 +3782,7 @@ id textinput_prefix_text
 id textinput_suffix_text
 id tilEmail
 id tilEmergencyMessage
+id tilName
 id tilNotes
 id tilPassword
 id time
@@ -3799,6 +3809,7 @@ id tvAddress
 id tvAddressSummary
 id tvAddressValue
 id tvAppName
+id tvAvatar
 id tvAvatarInitial
 id tvClientName
 id tvClientSummary
@@ -3825,6 +3836,7 @@ id tvTimestamp
 id tvTotalStat
 id tvTotalValue
 id tvUnreadBadge
+id tvUserRole
 id unchecked
 id uniform
 id unlabeled
@@ -3976,6 +3988,7 @@ layout activity_messaging_screen
 layout activity_search_screen
 layout activity_todays_deliveries
 layout activity_update_delivery_status
+layout activity_user_profile
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -4106,6 +4119,8 @@ string btn_cancel
 string btn_confirm
 string btn_login
 string btn_logout
+string btn_open_maps
+string btn_save
 string btn_send
 string btn_update_status
 string call_notification_answer_action
@@ -4158,6 +4173,8 @@ string failure_refus
 string hide_bottom_view_on_scroll_behavior
 string hint_email
 string hint_message
+string hint_name
+string hint_new_password
 string hint_password
 string hint_search
 string icon_content_description
@@ -4176,6 +4193,7 @@ string label_non_lu
 string label_notes
 string label_order
 string label_phone
+string label_role
 string label_total
 string login_title
 string logo_initials
@@ -4296,6 +4314,9 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string placeholder_name
+string profile_saved
+string role_controleur
+string role_livreur
 string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
@@ -4321,6 +4342,7 @@ string title_dashboard
 string title_delivery_detail
 string title_emergency
 string title_messages
+string title_new_user
 string title_profile
 string title_search
 string title_today_deliveries

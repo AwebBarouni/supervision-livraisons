@@ -2,7 +2,7 @@ package com.supervision.livraisons.util;
 
 public final class Constants {
 
-    public static final String BASE_URL = "http://10.0.2.2:8081/api/";
+    public static final String BASE_URL = "http://172.20.10.2:8081/";
     public static final String PREF_NAME = "SupervisionPrefs";
     public static final String KEY_TOKEN = "jwt_token";
     public static final String KEY_USER_ID = "user_id";

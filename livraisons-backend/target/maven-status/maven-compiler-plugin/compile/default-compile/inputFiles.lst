@@ -11,14 +11,17 @@ C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com
 C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\security\JwtAuthFilter.java
 C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\dto\UpdateStatusRequest.java
 C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\service\SyncService.java
+C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\websocket\EmergencyWebSocketHandler.java
 C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\controller\SyncController.java
 C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\repository\UserRepository.java
+C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\dto\UserRequest.java
 C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\config\SecurityConfig.java
 C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\dto\SyncUpdateStatusRequest.java
 C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\model\Message.java
 C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\dto\StartDaySyncResponse.java
 C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\dto\DeliveryStatsResponse.java
 C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\config\CorsConfig.java
+C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\config\WebSocketConfig.java
 C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\dto\SeedResponse.java
 C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\repository\MessageRepository.java
 C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\service\AuthService.java
@@ -29,5 +32,6 @@ C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com
 C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\controller\EmergencyController.java
 C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\security\JwtUtil.java
 C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\dto\LoginRequest.java
+C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\util\RouteOptimizer.java
 C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\LivraisonsBackendApplication.java
 C:\Users\MSI\Desktop\supervision livraisons\livraisons-backend\src\main\java\com\supervision\livraisons\model\User.java

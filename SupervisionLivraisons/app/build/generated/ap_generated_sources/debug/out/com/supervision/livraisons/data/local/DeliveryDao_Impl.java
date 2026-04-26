@@ -29,6 +29,8 @@ public final class DeliveryDao_Impl implements DeliveryDao {
 
   private final SharedSQLiteStatement __preparedStmtOfUpdateDeliveryStatus;
 
+  private final SharedSQLiteStatement __preparedStmtOfUpdateDeliveryStatusAndNotes;
+
   private final SharedSQLiteStatement __preparedStmtOfClearAllDeliveries;
 
   public DeliveryDao_Impl(@NonNull final RoomDatabase __db) {
@@ -83,6 +85,14 @@ public final class DeliveryDao_Impl implements DeliveryDao {
         return _query;
       }
     };
+    this.__preparedStmtOfUpdateDeliveryStatusAndNotes = new SharedSQLiteStatement(__db) {
+      @Override
+      @NonNull
+      public String createQuery() {
+        final String _query = "UPDATE deliveries SET status = ?, notes = ? WHERE id = ?";
+        return _query;
+      }
+    };
     this.__preparedStmtOfClearAllDeliveries = new SharedSQLiteStatement(__db) {
       @Override
       @NonNull
@@ -131,6 +141,42 @@ public final class DeliveryDao_Impl implements DeliveryDao {
       }
     } finally {
       __preparedStmtOfUpdateDeliveryStatus.release(_stmt);
+    }
+  }
+
+  @Override
+  public void updateDeliveryStatusAndNotes(final String deliveryId, final String status,
+      final String notes) {
+    __db.assertNotSuspendingTransaction();
+    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateDeliveryStatusAndNotes.acquire();
+    int _argIndex = 1;
+    if (status == null) {
+      _stmt.bindNull(_argIndex);
+    } else {
+      _stmt.bindString(_argIndex, status);
+    }
+    _argIndex = 2;
+    if (notes == null) {
+      _stmt.bindNull(_argIndex);
+    } else {
+      _stmt.bindString(_argIndex, notes);
+    }
+    _argIndex = 3;
+    if (deliveryId == null) {
+      _stmt.bindNull(_argIndex);
+    } else {
+      _stmt.bindString(_argIndex, deliveryId);
+    }
+    try {
+      __db.beginTransaction();
+      try {
+        _stmt.executeUpdateDelete();
+        __db.setTransactionSuccessful();
+      } finally {
+        __db.endTransaction();
+      }
+    } finally {
+      __preparedStmtOfUpdateDeliveryStatusAndNotes.release(_stmt);
     }
   }
 

@@ -8,6 +8,10 @@
         "source": "com.supervision.livraisons.app-main-58:/layout/activity_messaging_screen.xml"
     },
     {
+        "merged": "com.supervision.livraisons.app-mergeDebugResources-55:/layout/activity_user_profile.xml",
+        "source": "com.supervision.livraisons.app-main-58:/layout/activity_user_profile.xml"
+    },
+    {
         "merged": "com.supervision.livraisons.app-mergeDebugResources-55:/layout/activity_update_delivery_status.xml",
         "source": "com.supervision.livraisons.app-main-58:/layout/activity_update_delivery_status.xml"
     },

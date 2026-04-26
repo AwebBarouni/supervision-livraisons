@@ -23,9 +23,13 @@ com\supervision\livraisons\repository\MessageRepository.class
 com\supervision\livraisons\dto\SeedResponse.class
 com\supervision\livraisons\config\CorsConfig.class
 com\supervision\livraisons\model\Delivery.class
+com\supervision\livraisons\config\WebSocketConfig.class
 com\supervision\livraisons\dto\SendMessageRequest.class
 com\supervision\livraisons\service\DeliveryService.class
+com\supervision\livraisons\util\RouteOptimizer.class
+com\supervision\livraisons\websocket\EmergencyWebSocketHandler.class
 com\supervision\livraisons\controller\DeliveryController.class
 com\supervision\livraisons\repository\UserRepository.class
 com\supervision\livraisons\config\SecurityConfig.class
 com\supervision\livraisons\dto\LoginRequest.class
+com\supervision\livraisons\dto\UserRequest.class

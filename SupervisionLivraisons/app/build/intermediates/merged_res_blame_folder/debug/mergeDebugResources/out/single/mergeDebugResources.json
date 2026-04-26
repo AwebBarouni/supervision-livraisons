@@ -64,12 +64,20 @@
         "source": "com.supervision.livraisons.app-main-58:/drawable/bg_status_badge.xml"
     },
     {
+        "merged": "com.supervision.livraisons.app-debug-56:/layout_activity_user_profile.xml.flat",
+        "source": "com.supervision.livraisons.app-main-58:/layout/activity_user_profile.xml"
+    },
+    {
         "merged": "com.supervision.livraisons.app-debug-56:/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "com.supervision.livraisons.app-main-58:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
         "merged": "com.supervision.livraisons.app-debug-56:/menu_bottom_nav_controleur.xml.flat",
         "source": "com.supervision.livraisons.app-main-58:/menu/bottom_nav_controleur.xml"
+    },
+    {
+        "merged": "com.supervision.livraisons.app-debug-56:/drawable_ic_phone.xml.flat",
+        "source": "com.supervision.livraisons.app-main-58:/drawable/ic_phone.xml"
     },
     {
         "merged": "com.supervision.livraisons.app-debug-56:/layout_item_delivery.xml.flat",
