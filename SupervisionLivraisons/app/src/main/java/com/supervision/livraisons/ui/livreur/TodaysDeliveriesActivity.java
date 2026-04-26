@@ -7,7 +7,6 @@ import android.os.Bundle;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProvider;
@@ -22,12 +21,12 @@ import com.supervision.livraisons.databinding.ActivityTodaysDeliveriesBinding;
 import com.supervision.livraisons.model.Delivery;
 import com.supervision.livraisons.ui.auth.LoginActivity;
 import com.supervision.livraisons.ui.messaging.MessagingScreenActivity;
+import com.supervision.livraisons.ui.profile.UserProfileActivity;
 import com.supervision.livraisons.util.Constants;
 import com.supervision.livraisons.util.SessionManager;
 import com.supervision.livraisons.viewmodel.DeliveryViewModel;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 import dagger.hilt.android.AndroidEntryPoint;
@@ -39,6 +38,8 @@ public class TodaysDeliveriesActivity extends AppCompatActivity {
     private DeliveryViewModel viewModel;
     private DeliveryAdapter adapter;
     private FusedLocationProviderClient fusedLocationClient;
+    private Double currentLat = null;
+    private Double currentLng = null;
 
     private final ActivityResultLauncher<String> locationPermissionLauncher =
             registerForActivityResult(new ActivityResultContracts.RequestPermission(), granted -> {
@@ -82,13 +83,25 @@ public class TodaysDeliveriesActivity extends AppCompatActivity {
     private void loadDeliveriesWithLocation() {
         try {
             fusedLocationClient.getLastLocation().addOnSuccessListener(location -> {
-                Double lat = location != null ? location.getLatitude() : null;
-                Double lng = location != null ? location.getLongitude() : null;
-                viewModel.loadTodayDeliveries(this, lat, lng);
+                if (location != null) {
+                    currentLat = location.getLatitude();
+                    currentLng = location.getLongitude();
+                }
+                viewModel.loadTodayDeliveries(this, currentLat, currentLng);
             }).addOnFailureListener(e -> viewModel.loadTodayDeliveries(this, null, null));
         } catch (SecurityException e) {
             viewModel.loadTodayDeliveries(this, null, null);
         }
+    }
+
+    private static double haversineKm(double lat1, double lon1, double lat2, double lon2) {
+        double R = 6371.0;
+        double dLat = Math.toRadians(lat2 - lat1);
+        double dLon = Math.toRadians(lon2 - lon1);
+        double a = Math.sin(dLat / 2) * Math.sin(dLat / 2)
+                 + Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2))
+                 * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     }
 
     private void setupToolbar() {
@@ -111,24 +124,33 @@ public class TodaysDeliveriesActivity extends AppCompatActivity {
         binding.recyclerView.setAdapter(adapter);
     }
 
-    private static int statusSortOrder(String status) {
-        if (status == null) return 0;
-        switch (status) {
-            case Constants.STATUS_EN_ATTENTE: return 0;
-            case Constants.STATUS_EN_COURS:   return 1;
-            case Constants.STATUS_ECHOUE:     return 2;
-            case Constants.STATUS_LIVRE:      return 3;
-            default:                          return 0;
+    private boolean isDone(String status) {
+        return Constants.STATUS_LIVRE.equals(status) || Constants.STATUS_ECHOUE.equals(status);
+    }
+
+    private double distanceFromMe(com.supervision.livraisons.model.Delivery d) {
+        if (currentLat == null || currentLng == null || d.getLat() == null || d.getLng() == null) {
+            return Double.MAX_VALUE;
         }
+        return haversineKm(currentLat, currentLng, d.getLat(), d.getLng());
+    }
+
+    private void sortAndDisplay(List<Delivery> deliveries) {
+        deliveries.sort((a, b) -> {
+            boolean aDone = isDone(a.getStatus());
+            boolean bDone = isDone(b.getStatus());
+            if (aDone != bDone) return aDone ? 1 : -1;
+            return Double.compare(distanceFromMe(a), distanceFromMe(b));
+        });
+        adapter.setFilter(deliveries);
+        binding.tvEmptyState.setVisibility(deliveries.isEmpty() ? android.view.View.VISIBLE : android.view.View.GONE);
+        updateSummary(deliveries);
     }
 
     private void observeViewModel() {
         viewModel.getDeliveries().observe(this, deliveries -> {
             List<Delivery> safe = deliveries != null ? new ArrayList<>(deliveries) : new ArrayList<>();
-            safe.sort(Comparator.comparingInt(d -> statusSortOrder(d.getStatus())));
-            adapter.setFilter(safe);
-            binding.tvEmptyState.setVisibility(safe.isEmpty() ? android.view.View.VISIBLE : android.view.View.GONE);
-            updateSummary(safe);
+            sortAndDisplay(safe);
         });
 
         viewModel.getErrorMessage().observe(this, message -> {
@@ -178,24 +200,12 @@ public class TodaysDeliveriesActivity extends AppCompatActivity {
                 return true;
             }
             if (id == R.id.nav_profil) {
-                showProfileDialog();
+                startActivity(new Intent(this, UserProfileActivity.class));
                 binding.bottomNav.setSelectedItemId(R.id.nav_accueil);
                 return true;
             }
             return false;
         });
-    }
-
-    private void showProfileDialog() {
-        String userName = SessionManager.getUserName(this);
-        String profileText = (userName == null ? "" : userName) + "\n\n" + getString(R.string.logout_question);
-
-        new AlertDialog.Builder(this)
-                .setTitle(R.string.title_profile)
-                .setMessage(profileText)
-                .setPositiveButton(R.string.btn_logout, (dialog, which) -> performLogout())
-                .setNegativeButton(R.string.btn_cancel, null)
-                .show();
     }
 
     private void performLogout() {

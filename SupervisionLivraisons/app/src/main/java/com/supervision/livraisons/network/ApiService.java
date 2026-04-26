@@ -32,6 +32,15 @@ public interface ApiService {
     @GET("users/livreurs")
     Call<List<User>> getLivreurs();
 
+    @GET("users/{id}")
+    Call<User> getUserById(@Path("id") String id);
+
+    @POST("users")
+    Call<User> createUser(@Body com.supervision.livraisons.dto.UserRequest request);
+
+    @PUT("users/{id}")
+    Call<User> updateUser(@Path("id") String id, @Body com.supervision.livraisons.dto.UserRequest request);
+
     @GET("deliveries")
     Call<List<Delivery>> getDeliveries();
 

@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.lifecycle.ViewModelProvider;
@@ -19,6 +18,7 @@ import com.supervision.livraisons.databinding.ActivityAllDeliveriesBinding;
 import com.supervision.livraisons.model.Delivery;
 import com.supervision.livraisons.ui.auth.LoginActivity;
 import com.supervision.livraisons.ui.messaging.MessagingScreenActivity;
+import com.supervision.livraisons.ui.profile.UserProfileActivity;
 import com.supervision.livraisons.util.Constants;
 import com.supervision.livraisons.util.SessionManager;
 import com.supervision.livraisons.viewmodel.DeliveryViewModel;
@@ -43,6 +43,8 @@ public class AllDeliveriesActivity extends AppCompatActivity {
     private String selectedStatus = "ALL";
     private String searchQuery = "";
     private boolean isController = false;
+    private Double currentLat = null;
+    private Double currentLng = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -178,7 +180,7 @@ public class AllDeliveriesActivity extends AppCompatActivity {
                 return true;
             }
             if (id == R.id.nav_profil) {
-                showProfileDialog();
+                startActivity(new Intent(this, UserProfileActivity.class));
                 binding.bottomNav.setSelectedItemId(R.id.nav_livraisons);
                 return true;
             }
@@ -186,15 +188,21 @@ public class AllDeliveriesActivity extends AppCompatActivity {
         });
     }
 
-    private static int statusSortOrder(String status) {
-        if (status == null) return 0;
-        switch (status) {
-            case Constants.STATUS_EN_ATTENTE: return 0;
-            case Constants.STATUS_EN_COURS:   return 1;
-            case Constants.STATUS_ECHOUE:     return 2;
-            case Constants.STATUS_LIVRE:      return 3;
-            default:                          return 0;
+    private boolean isDone(String status) {
+        return Constants.STATUS_LIVRE.equals(status) || Constants.STATUS_ECHOUE.equals(status);
+    }
+
+    private double distanceFromMe(Delivery d) {
+        if (currentLat == null || currentLng == null || d.getLat() == null || d.getLng() == null) {
+            return Double.MAX_VALUE;
         }
+        double R = 6371.0;
+        double dLat = Math.toRadians(d.getLat() - currentLat);
+        double dLon = Math.toRadians(d.getLng() - currentLng);
+        double a = Math.sin(dLat/2)*Math.sin(dLat/2)
+                 + Math.cos(Math.toRadians(currentLat))*Math.cos(Math.toRadians(d.getLat()))
+                 * Math.sin(dLon/2)*Math.sin(dLon/2);
+        return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
     }
 
     private void observeViewModel() {
@@ -244,22 +252,16 @@ public class AllDeliveriesActivity extends AppCompatActivity {
             }
         }
 
-        filtered.sort(Comparator.comparingInt(d -> statusSortOrder(d.getStatus())));
+        filtered.sort((a, b) -> {
+            boolean aDone = isDone(a.getStatus());
+            boolean bDone = isDone(b.getStatus());
+            if (aDone != bDone) return aDone ? 1 : -1;
+            if (!isController) return Double.compare(distanceFromMe(a), distanceFromMe(b));
+            return 0;
+        });
 
         adapter.setFilter(filtered);
         binding.tvEmptyState.setVisibility(filtered.isEmpty() ? android.view.View.VISIBLE : android.view.View.GONE);
-    }
-
-    private void showProfileDialog() {
-        String userName = SessionManager.getUserName(this);
-        String profileText = (userName == null ? "" : userName) + "\n\n" + getString(R.string.logout_question);
-
-        new AlertDialog.Builder(this)
-                .setTitle(R.string.title_profile)
-                .setMessage(profileText)
-                .setPositiveButton(R.string.btn_logout, (dialog, which) -> performLogout())
-                .setNegativeButton(R.string.btn_cancel, null)
-                .show();
     }
 
     private void performLogout() {

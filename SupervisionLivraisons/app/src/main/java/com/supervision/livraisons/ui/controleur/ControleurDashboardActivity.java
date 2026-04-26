@@ -30,6 +30,8 @@ import com.supervision.livraisons.model.User;
 import com.supervision.livraisons.ui.auth.LoginActivity;
 import com.supervision.livraisons.ui.livreur.AllDeliveriesActivity;
 import com.supervision.livraisons.ui.messaging.MessagingScreenActivity;
+import com.supervision.livraisons.ui.profile.UserProfileActivity;
+import com.supervision.livraisons.util.Constants;
 import com.supervision.livraisons.util.SessionManager;
 import com.supervision.livraisons.viewmodel.DashboardViewModel;
 
@@ -77,6 +79,11 @@ public class ControleurDashboardActivity extends AppCompatActivity {
 
     private void setupEmergencyFab() {
         binding.fabEmergency.setOnClickListener(v -> startActivity(new Intent(this, EmergencyMessageActivity.class)));
+        binding.fabAddUser.setOnClickListener(v -> {
+            Intent intent = new Intent(this, UserProfileActivity.class);
+            intent.putExtra(UserProfileActivity.EXTRA_IS_NEW_USER, true);
+            startActivity(intent);
+        });
     }
 
     private void setupBottomNavigation() {
@@ -139,7 +146,14 @@ public class ControleurDashboardActivity extends AppCompatActivity {
             LinearLayout row = new LinearLayout(this);
             row.setOrientation(LinearLayout.HORIZONTAL);
             row.setGravity(Gravity.CENTER_VERTICAL);
-            row.setPadding(0, dp(8), 0, dp(8));
+            row.setPadding(0, dp(10), 0, dp(10));
+            row.setClickable(true);
+            row.setFocusable(true);
+            int[] attrs = new int[]{android.R.attr.selectableItemBackground};
+            android.content.res.TypedArray ta = obtainStyledAttributes(attrs);
+            row.setBackground(ta.getDrawable(0));
+            ta.recycle();
+            row.setOnClickListener(v -> openUserProfile(user.getId()));
 
             TextView avatar = new TextView(this);
             LinearLayout.LayoutParams avatarParams = new LinearLayout.LayoutParams(dp(44), dp(44));
@@ -149,35 +163,48 @@ public class ControleurDashboardActivity extends AppCompatActivity {
             avatar.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14f);
             avatar.setTypeface(avatar.getTypeface(), android.graphics.Typeface.BOLD);
             avatar.setText(firstLetter(user.getName()));
-            avatar.setBackground(circleDrawable(ContextCompat.getColor(this, R.color.colorPrimary)));
+            avatar.setBackground(circleDrawable(ContextCompat.getColor(this, R.color.colorSuccess)));
+
+            LinearLayout nameBlock = new LinearLayout(this);
+            LinearLayout.LayoutParams blockParams = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f);
+            blockParams.setMargins(dp(12), 0, 0, 0);
+            nameBlock.setLayoutParams(blockParams);
+            nameBlock.setOrientation(LinearLayout.VERTICAL);
 
             TextView name = new TextView(this);
-            LinearLayout.LayoutParams nameParams = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f);
-            nameParams.setMargins(dp(12), 0, 0, 0);
-            name.setLayoutParams(nameParams);
+            name.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
             name.setText(user.getName());
             name.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16f);
             name.setTextColor(ContextCompat.getColor(this, R.color.colorTextPrimary));
+            name.setTypeface(name.getTypeface(), android.graphics.Typeface.BOLD);
 
-            View statusDot = new View(this);
-            LinearLayout.LayoutParams dotParams = new LinearLayout.LayoutParams(dp(10), dp(10));
-            statusDot.setLayoutParams(dotParams);
-            statusDot.setBackground(circleDrawable(ContextCompat.getColor(this, R.color.colorSuccess)));
+            TextView email = new TextView(this);
+            email.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            email.setText(user.getEmail() != null ? user.getEmail() : "");
+            email.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12f);
+            email.setTextColor(ContextCompat.getColor(this, R.color.colorTextSecondary));
 
-            TextView statusText = new TextView(this);
-            LinearLayout.LayoutParams statusParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-            statusParams.setMargins(dp(6), 0, 0, 0);
-            statusText.setLayoutParams(statusParams);
-            statusText.setText(R.string.label_active);
-            statusText.setTextColor(ContextCompat.getColor(this, R.color.colorTextSecondary));
-            statusText.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12f);
+            nameBlock.addView(name);
+            nameBlock.addView(email);
+
+            TextView editHint = new TextView(this);
+            LinearLayout.LayoutParams editParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+            editHint.setLayoutParams(editParams);
+            editHint.setText("›");
+            editHint.setTextSize(TypedValue.COMPLEX_UNIT_SP, 22f);
+            editHint.setTextColor(ContextCompat.getColor(this, R.color.colorTextSecondary));
 
             row.addView(avatar);
-            row.addView(name);
-            row.addView(statusDot);
-            row.addView(statusText);
+            row.addView(nameBlock);
+            row.addView(editHint);
             binding.containerLivreurs.addView(row);
         }
+    }
+
+    private void openUserProfile(String userId) {
+        Intent intent = new Intent(this, UserProfileActivity.class);
+        intent.putExtra(Constants.EXTRA_USER_ID, userId);
+        startActivity(intent);
     }
 
     private void renderChart(List<Delivery> deliveries) {
