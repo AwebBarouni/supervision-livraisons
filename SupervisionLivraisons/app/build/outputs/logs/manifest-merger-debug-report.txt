@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:2:1-46:12
+ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:2:1-48:12
 MERGED from [androidx.databinding:viewbinding:8.10.1] C:\Users\MSI\.gradle\caches\8.11.1\transforms\e85b49c31ac33c708fb375c5036ae1f9\transformed\viewbinding-8.10.1\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-common:2.7.7] C:\Users\MSI\.gradle\caches\8.11.1\transforms\179ca495493bc22306bd26b7b21799a1\transformed\navigation-common-2.7.7\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-runtime:2.7.7] C:\Users\MSI\.gradle\caches\8.11.1\transforms\eed22157a01a5c132f90ecd8b2554386\transformed\navigation-runtime-2.7.7\AndroidManifest.xml:17:1-22:12
@@ -81,6 +81,7 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\MSI\.gradle\caches\8.11.1\tran
 MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\MSI\.gradle\caches\8.11.1\transforms\94a89f60f56a88b90c3b13be663b0317\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.dagger:dagger-lint-aar:2.51.1] C:\Users\MSI\.gradle\caches\8.11.1\transforms\6782b925f4634a9c4b12ec2be353d01b\transformed\dagger-lint-aar-2.51.1\AndroidManifest.xml:16:1-19:12
 	package
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:3:5-41
 		INJECTED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml
@@ -89,13 +90,13 @@ MERGED from [com.google.dagger:dagger-lint-aar:2.51.1] C:\Users\MSI\.gradle\cach
 	xmlns:android
 		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:4:5-66
+ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:5:5-66
 MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\MSI\.gradle\caches\8.11.1\transforms\66d73c5a3d2f72e78b95dbcd94425bf7\transformed\play-services-maps-18.2.0\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\MSI\.gradle\caches\8.11.1\transforms\66d73c5a3d2f72e78b95dbcd94425bf7\transformed\play-services-maps-18.2.0\AndroidManifest.xml:24:5-67
 	android:name
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:4:22-64
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:5:5-78
+ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:6:5-78
 MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\MSI\.gradle\caches\8.11.1\transforms\66d73c5a3d2f72e78b95dbcd94425bf7\transformed\play-services-maps-18.2.0\AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\MSI\.gradle\caches\8.11.1\transforms\66d73c5a3d2f72e78b95dbcd94425bf7\transformed\play-services-maps-18.2.0\AndroidManifest.xml:23:5-79
 MERGED from [androidx.work:work-runtime:2.9.1] C:\Users\MSI\.gradle\caches\8.11.1\transforms\04b3c3594226e8f791a6fe3d4bd0e1e9\transformed\work-runtime-2.9.1\AndroidManifest.xml:24:5-79
@@ -103,22 +104,22 @@ MERGED from [androidx.work:work-runtime:2.9.1] C:\Users\MSI\.gradle\caches\8.11.
 MERGED from [com.google.android.datatransport:transport-runtime:4.1.1] C:\Users\MSI\.gradle\caches\8.11.1\transforms\ba3965efb4b075e99afa3970bf2590f5\transformed\transport-runtime-4.1.1\AndroidManifest.xml:20:5-79
 MERGED from [com.google.android.datatransport:transport-runtime:4.1.1] C:\Users\MSI\.gradle\caches\8.11.1\transforms\ba3965efb4b075e99afa3970bf2590f5\transformed\transport-runtime-4.1.1\AndroidManifest.xml:20:5-79
 	android:name
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:5:22-76
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:6:22-76
 uses-permission#android.permission.POST_NOTIFICATIONS
-ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:6:5-76
+ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:7:5-76
 	android:name
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:6:22-74
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:7:22-74
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:7:5-78
+ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:8:5-78
 	android:name
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:7:22-76
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:8:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:8:5-80
+ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:9:5-80
 	android:name
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:8:22-78
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:9:22-78
 application
-ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:10:5-44:19
-INJECTED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:10:5-44:19
+ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:11:5-46:19
+INJECTED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:11:5-46:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\MSI\.gradle\caches\8.11.1\transforms\c56a873fb51b2d386f90917fdac73ee5\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\MSI\.gradle\caches\8.11.1\transforms\c56a873fb51b2d386f90917fdac73ee5\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\MSI\.gradle\caches\8.11.1\transforms\6f4854c1779b00a1064b69ae49de3c70\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -158,105 +159,107 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\MS
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.0] C:\Users\MSI\.gradle\caches\8.11.1\transforms\9463649d11e16760927952211000d427\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:16:9-35
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:17:9-35
 	android:label
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:14:9-41
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:15:9-41
 	android:roundIcon
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:15:9-54
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:16:9-54
 	android:icon
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:13:9-43
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:14:9-43
 	android:allowBackup
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:13:9-35
 	android:theme
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:17:9-59
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:18:9-59
+	android:enableOnBackInvokedCallback
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:20:9-51
 	android:usesCleartextTraffic
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:18:9-44
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:19:9-44
 	android:name
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:11:9-49
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:12:9-75
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:20:9-22:55
+ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:22:9-24:55
 	android:value
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:22:13-53
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:24:13-53
 	android:name
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:21:13-58
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:23:13-58
 activity#com.supervision.livraisons.ui.auth.LoginActivity
-ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:24:9-32:20
+ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:26:9-34:20
 	android:windowSoftInputMode
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:27:13-55
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:29:13-55
 	android:exported
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:26:13-36
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:28:13-36
 	android:name
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:25:13-50
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:27:13-76
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:28:13-31:29
+ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:30:13-33:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:29:17-68
+ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:31:17-68
 	android:name
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:29:25-66
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:31:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:30:17-76
+ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:32:17-76
 	android:name
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:30:27-74
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:32:27-74
 activity#com.supervision.livraisons.ui.livreur.TodaysDeliveriesActivity
-ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:34:9-97
+ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:36:9-123
 	android:exported
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:34:71-95
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:36:97-121
 	android:name
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:34:19-70
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:36:19-96
 activity#com.supervision.livraisons.ui.livreur.AllDeliveriesActivity
-ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:35:9-94
+ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:37:9-120
 	android:exported
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:35:68-92
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:37:94-118
 	android:name
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:35:19-67
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:37:19-93
 activity#com.supervision.livraisons.ui.livreur.DeliveryDetailActivity
-ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:36:9-95
+ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:38:9-121
 	android:exported
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:36:69-93
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:38:95-119
 	android:name
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:36:19-68
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:38:19-94
 activity#com.supervision.livraisons.ui.livreur.UpdateDeliveryStatusActivity
-ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:37:9-101
+ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:39:9-127
 	android:exported
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:37:75-99
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:39:101-125
 	android:name
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:37:19-74
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:39:19-100
 activity#com.supervision.livraisons.ui.livreur.SearchScreenActivity
-ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:38:9-93
+ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:40:9-119
 	android:exported
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:38:67-91
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:40:93-117
 	android:name
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:38:19-66
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:40:19-92
 activity#com.supervision.livraisons.ui.controleur.ControleurDashboardActivity
-ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:39:9-103
+ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:41:9-129
 	android:exported
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:39:77-101
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:41:103-127
 	android:name
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:39:19-76
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:41:19-102
 activity#com.supervision.livraisons.ui.controleur.EmergencyMessageActivity
-ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:40:9-100
+ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:42:9-126
 	android:exported
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:40:74-98
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:42:100-124
 	android:name
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:40:19-73
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:42:19-99
 activity#com.supervision.livraisons.ui.messaging.MessagingScreenActivity
-ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:41:9-98
+ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:43:9-124
 	android:exported
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:41:72-96
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:43:98-122
 	android:name
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:41:19-71
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:43:19-97
 activity#com.supervision.livraisons.ui.messaging.ConversationActivity
-ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:42:9-95
+ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:44:9-121
 	android:exported
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:42:69-93
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:44:95-119
 	android:name
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:42:19-68
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:44:19-94
 activity#com.supervision.livraisons.ui.profile.UserProfileActivity
-ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:43:9-92
+ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:45:9-118
 	android:exported
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:43:66-90
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:45:92-116
 	android:name
-		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:43:19-65
+		ADDED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:45:19-91
 uses-sdk
 INJECTED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml
