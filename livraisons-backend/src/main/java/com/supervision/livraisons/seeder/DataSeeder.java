@@ -42,6 +42,36 @@ public class DataSeeder implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) {
         seedIfEmpty();
+        seedMissingUsers();
+    }
+
+    private void seedMissingUsers() {
+        if (userRepository.findByEmail("walid@livraison.com").isPresent()) {
+            return;
+        }
+        Date now = new Date();
+        User walid = new User(null, "Walid", "walid@livraison.com",
+                passwordEncoder.encode("livreur123"), "LIVREUR",
+                "https://ui-avatars.com/api/?name=Walid&background=EA4335&color=fff", now);
+        walid = userRepository.save(walid);
+
+        List<Delivery> deliveries = new ArrayList<>();
+        deliveries.add(createDelivery("Mme Hammami", "+216 22 678 901", "15 Route de la Marsa, Tunis",
+                36.8520, 10.2180, "2x Colis standard", "Sonner deux fois",
+                "EN_ATTENTE", null, walid.getId(), timeToday(9, 30)));
+        deliveries.add(createDelivery("M. Ben Salem", "+216 98 234 567", "7 Rue de France, Tunis",
+                36.8120, 10.1800, "1x Document urgent", "Remettre en mains propres",
+                "EN_ATTENTE", null, walid.getId(), timeToday(10, 45)));
+        deliveries.add(createDelivery("Mme Dridi", "+216 24 890 123", "22 Avenue des Arts, Ennasr",
+                36.8420, 10.2070, "3x Colis e-commerce", "Priorite haute",
+                "EN_ATTENTE", null, walid.getId(), timeToday(12, 0)));
+        deliveries.add(createDelivery("M. Guermazi", "+216 20 456 789", "8 Rue du Lac, Lac 2",
+                36.8250, 10.2370, "1x Electro-menager", "Livraison lourde, aide necessaire",
+                "EN_ATTENTE", null, walid.getId(), timeToday(14, 30)));
+        deliveries.add(createDelivery("Mme Boughanmi", "+216 55 012 345", "5 Rue Principale, Riadh El Andalous",
+                36.8640, 10.2450, "2x Colis fragile", "Fragile",
+                "EN_ATTENTE", null, walid.getId(), timeToday(16, 0)));
+        deliveryRepository.saveAll(deliveries);
     }
 
     @Transactional
