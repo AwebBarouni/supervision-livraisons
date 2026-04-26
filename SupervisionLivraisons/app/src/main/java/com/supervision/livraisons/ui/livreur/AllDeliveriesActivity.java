@@ -24,6 +24,7 @@ import com.supervision.livraisons.util.SessionManager;
 import com.supervision.livraisons.viewmodel.DeliveryViewModel;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
@@ -41,6 +42,7 @@ public class AllDeliveriesActivity extends AppCompatActivity {
     private final List<Delivery> allDeliveries = new ArrayList<>();
     private String selectedStatus = "ALL";
     private String searchQuery = "";
+    private boolean isController = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,7 @@ public class AllDeliveriesActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         viewModel = new ViewModelProvider(this).get(DeliveryViewModel.class);
+        isController = Constants.ROLE_CONTROLEUR.equals(SessionManager.getUserRole(this));
 
         setupToolbar();
         setupTabs();
@@ -60,7 +63,11 @@ public class AllDeliveriesActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        viewModel.loadAllDeliveries(this);
+        if (isController) {
+            viewModel.loadDeliveriesFromApi();
+        } else {
+            viewModel.loadAllDeliveries(this);
+        }
     }
 
     private void setupToolbar() {
@@ -179,8 +186,29 @@ public class AllDeliveriesActivity extends AppCompatActivity {
         });
     }
 
+    private static int statusSortOrder(String status) {
+        if (status == null) return 0;
+        switch (status) {
+            case Constants.STATUS_EN_ATTENTE: return 0;
+            case Constants.STATUS_EN_COURS:   return 1;
+            case Constants.STATUS_ECHOUE:     return 2;
+            case Constants.STATUS_LIVRE:      return 3;
+            default:                          return 0;
+        }
+    }
+
     private void observeViewModel() {
         viewModel.getDeliveries().observe(this, deliveries -> {
+            if (isController) return;
+            allDeliveries.clear();
+            if (deliveries != null) {
+                allDeliveries.addAll(deliveries);
+            }
+            applyFilters();
+        });
+
+        viewModel.getRemoteDeliveries().observe(this, deliveries -> {
+            if (!isController) return;
             allDeliveries.clear();
             if (deliveries != null) {
                 allDeliveries.addAll(deliveries);
@@ -215,6 +243,8 @@ public class AllDeliveriesActivity extends AppCompatActivity {
                 filtered.add(delivery);
             }
         }
+
+        filtered.sort(Comparator.comparingInt(d -> statusSortOrder(d.getStatus())));
 
         adapter.setFilter(filtered);
         binding.tvEmptyState.setVisibility(filtered.isEmpty() ? android.view.View.VISIBLE : android.view.View.GONE);

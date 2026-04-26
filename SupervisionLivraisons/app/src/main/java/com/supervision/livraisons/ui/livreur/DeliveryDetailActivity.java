@@ -2,6 +2,7 @@ package com.supervision.livraisons.ui.livreur;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 
@@ -78,6 +79,35 @@ public class DeliveryDetailActivity extends AppCompatActivity implements OnMapRe
             intent.putExtra(Constants.EXTRA_DELIVERY_ID, deliveryId);
             startActivity(intent);
         });
+
+        binding.tvPhoneValue.setOnClickListener(v -> {
+            String phone = binding.tvPhoneValue.getText().toString().trim();
+            if (!phone.isEmpty()) {
+                startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phone)));
+            }
+        });
+
+        binding.btnOpenMaps.setOnClickListener(v -> openInMaps());
+    }
+
+    private void openInMaps() {
+        if (currentDelivery == null) return;
+        Uri geoUri;
+        if (currentDelivery.getLat() != null && currentDelivery.getLng() != null) {
+            geoUri = Uri.parse("geo:" + currentDelivery.getLat() + "," + currentDelivery.getLng()
+                    + "?q=" + Uri.encode(safe(currentDelivery.getAddress())));
+        } else {
+            geoUri = Uri.parse("geo:0,0?q=" + Uri.encode(safe(currentDelivery.getAddress())));
+        }
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, geoUri);
+        mapIntent.setPackage("com.google.android.apps.maps");
+        if (mapIntent.resolveActivity(getPackageManager()) != null) {
+            startActivity(mapIntent);
+        } else {
+            Uri browserUri = Uri.parse("https://maps.google.com/maps?q="
+                    + Uri.encode(safe(currentDelivery.getAddress())));
+            startActivity(new Intent(Intent.ACTION_VIEW, browserUri));
+        }
     }
 
     private void observeViewModel() {

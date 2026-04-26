@@ -122,18 +122,20 @@ public class SyncRepository {
         }
     }
 
-    public void updateStatusLocalFirst(String deliveryId, String incomingStatus) {
+    public void updateStatusLocalFirst(String deliveryId, String incomingStatus, String notes) {
         if (TextUtils.isEmpty(deliveryId)) {
             return;
         }
 
         final String localStatus = toLocalStatus(incomingStatus);
-        ioExecutor.execute(() -> deliveryDao.updateDeliveryStatus(deliveryId, localStatus));
+        final String safeNotes = notes == null ? "" : notes;
+        ioExecutor.execute(() -> deliveryDao.updateDeliveryStatusAndNotes(deliveryId, localStatus, safeNotes));
 
         SyncUpdateStatusRequest request = new SyncUpdateStatusRequest(
                 deliveryId,
                 toRemoteStatus(localStatus),
-                OffsetDateTime.now().toString()
+                OffsetDateTime.now().toString(),
+                safeNotes
         );
 
         apiService.updateStatusViaSync(request).enqueue(new Callback<Delivery>() {

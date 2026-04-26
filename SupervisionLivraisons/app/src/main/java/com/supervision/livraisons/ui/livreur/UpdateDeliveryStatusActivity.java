@@ -114,7 +114,6 @@ public class UpdateDeliveryStatusActivity extends AppCompatActivity {
         int checkedId = binding.rgStatus.getCheckedRadioButtonId();
 
         String status;
-
         if (checkedId == R.id.rbLivre) {
             status = Constants.STATUS_LIVRE;
         } else if (checkedId == R.id.rbEchoue) {
@@ -123,7 +122,8 @@ public class UpdateDeliveryStatusActivity extends AppCompatActivity {
             status = Constants.STATUS_EN_COURS;
         }
 
-        viewModel.updateStatus(deliveryId, status);
+        String notes = binding.etNotes.getText() != null ? binding.etNotes.getText().toString().trim() : "";
+        viewModel.updateStatus(deliveryId, status, notes);
     }
 
     private void toggleFailureViews(boolean visible) {

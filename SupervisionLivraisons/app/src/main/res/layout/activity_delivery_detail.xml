@@ -32,6 +32,22 @@
             android:orientation="vertical"
             android:padding="@dimen/spacing_md">
 
+            <!-- Status badge -->
+            <TextView
+                android:id="@+id/tvStatusBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_md"
+                android:background="@drawable/bg_status_badge"
+                android:paddingStart="@dimen/spacing_md"
+                android:paddingTop="6dp"
+                android:paddingEnd="@dimen/spacing_md"
+                android:paddingBottom="6dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Client card -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -45,73 +61,106 @@
                     android:orientation="vertical"
                     android:padding="@dimen/spacing_md">
 
+                    <!-- Client name -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/label_client"
                         android:textColor="@color/colorTextSecondary"
-                        android:textSize="@dimen/text_caption" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/tvClientValue"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_md"
                         android:textColor="@color/colorTextPrimary"
-                        android:textSize="@dimen/text_subtitle"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/spacing_sm"
-                        android:text="@string/label_phone"
-                        android:textColor="@color/colorTextSecondary"
-                        android:textSize="@dimen/text_caption" />
-
-                    <TextView
+                    <!-- Phone — full-width tappable call button -->
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/tvPhoneValue"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorTextPrimary"
-                        android:textSize="@dimen/text_body" />
+                        android:layout_height="56dp"
+                        android:layout_marginBottom="@dimen/spacing_sm"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:icon="@drawable/ic_phone"
+                        app:iconGravity="textStart"
+                        app:iconPadding="8dp"
+                        app:strokeColor="@color/colorPrimary"
+                        app:cornerRadius="12dp" />
 
+                    <!-- Address -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/spacing_sm"
                         android:text="@string/label_address"
                         android:textColor="@color/colorTextSecondary"
-                        android:textSize="@dimen/text_caption" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/tvAddressValue"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_sm"
                         android:textColor="@color/colorTextPrimary"
                         android:textSize="@dimen/text_body" />
+
+                    <!-- Open in Maps button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnOpenMaps"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="@string/btn_open_maps"
+                        android:textAllCaps="false"
+                        android:textSize="14sp"
+                        app:strokeColor="@color/colorSuccess"
+                        app:cornerRadius="12dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Order & Notes card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_md"
+                app:cardBackgroundColor="@color/colorSurface"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_md">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/spacing_sm"
                         android:text="@string/label_order"
                         android:textColor="@color/colorTextSecondary"
-                        android:textSize="@dimen/text_caption" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/tvOrderValue"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_md"
                         android:textColor="@color/colorTextPrimary"
                         android:textSize="@dimen/text_body" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/spacing_sm"
                         android:text="@string/label_notes"
                         android:textColor="@color/colorTextSecondary"
-                        android:textSize="@dimen/text_caption" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/tvNotesValue"
@@ -120,38 +169,29 @@
                         android:textColor="@color/colorTextPrimary"
                         android:textSize="@dimen/text_body" />
 
-                    <TextView
-                        android:id="@+id/tvStatusBadge"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/spacing_md"
-                        android:background="@drawable/bg_status_badge"
-                        android:paddingStart="@dimen/spacing_md"
-                        android:paddingTop="@dimen/spacing_xs"
-                        android:paddingEnd="@dimen/spacing_md"
-                        android:paddingBottom="@dimen/spacing_xs"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/text_caption"
-                        android:textStyle="bold" />
-
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Map (visible when API key is configured) -->
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/mapContainer"
                 android:name="com.google.android.gms.maps.SupportMapFragment"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="180dp"
                 android:layout_marginTop="@dimen/spacing_md" />
 
+            <!-- Update Status button -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnUpdateStatus"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginTop="@dimen/spacing_md"
+                android:layout_marginBottom="@dimen/spacing_md"
                 android:text="@string/btn_update_status"
                 android:textAllCaps="false"
-                app:backgroundTint="@color/colorAccent"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/colorPrimary"
                 app:cornerRadius="12dp" />
 
         </LinearLayout>

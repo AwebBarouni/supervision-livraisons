@@ -27,6 +27,7 @@ import com.supervision.livraisons.util.SessionManager;
 import com.supervision.livraisons.viewmodel.DeliveryViewModel;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import dagger.hilt.android.AndroidEntryPoint;
@@ -110,9 +111,21 @@ public class TodaysDeliveriesActivity extends AppCompatActivity {
         binding.recyclerView.setAdapter(adapter);
     }
 
+    private static int statusSortOrder(String status) {
+        if (status == null) return 0;
+        switch (status) {
+            case Constants.STATUS_EN_ATTENTE: return 0;
+            case Constants.STATUS_EN_COURS:   return 1;
+            case Constants.STATUS_ECHOUE:     return 2;
+            case Constants.STATUS_LIVRE:      return 3;
+            default:                          return 0;
+        }
+    }
+
     private void observeViewModel() {
         viewModel.getDeliveries().observe(this, deliveries -> {
-            List<Delivery> safe = deliveries != null ? deliveries : new ArrayList<>();
+            List<Delivery> safe = deliveries != null ? new ArrayList<>(deliveries) : new ArrayList<>();
+            safe.sort(Comparator.comparingInt(d -> statusSortOrder(d.getStatus())));
             adapter.setFilter(safe);
             binding.tvEmptyState.setVisibility(safe.isEmpty() ? android.view.View.VISIBLE : android.view.View.GONE);
             updateSummary(safe);

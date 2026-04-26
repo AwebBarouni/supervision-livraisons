@@ -17,6 +17,9 @@ public interface DeliveryDao {
     @Query("UPDATE deliveries SET status = :status WHERE id = :deliveryId")
     void updateDeliveryStatus(String deliveryId, String status);
 
+    @Query("UPDATE deliveries SET status = :status, notes = :notes WHERE id = :deliveryId")
+    void updateDeliveryStatusAndNotes(String deliveryId, String status, String notes);
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertDeliveries(List<DeliveryEntity> deliveries);
 

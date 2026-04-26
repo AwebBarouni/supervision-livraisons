@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="@dimen/spacing_sm"
+    android:layout_marginStart="@dimen/spacing_md"
     android:layout_marginTop="6dp"
-    android:layout_marginEnd="@dimen/spacing_sm"
+    android:layout_marginEnd="@dimen/spacing_md"
     android:layout_marginBottom="6dp"
     app:cardCornerRadius="@dimen/card_corner_radius"
     app:cardElevation="@dimen/card_elevation">
@@ -13,49 +13,55 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="92dp">
+        android:minHeight="100dp">
 
+        <!-- Colored status bar on the left -->
         <View
             android:id="@+id/viewStatusBar"
-            android:layout_width="4dp"
+            android:layout_width="6dp"
             android:layout_height="0dp"
             android:background="@color/colorPending"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
+        <!-- Client name -->
         <TextView
             android:id="@+id/tvClientName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_md"
-            android:layout_marginTop="@dimen/spacing_sm"
+            android:layout_marginTop="14dp"
             android:textColor="@color/colorTextPrimary"
-            android:textSize="16sp"
+            android:textSize="17sp"
             android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxLines="1"
             app:layout_constraintStart_toEndOf="@id/viewStatusBar"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@id/tvStatus" />
 
+        <!-- Address -->
         <TextView
             android:id="@+id/tvAddress"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_xs"
+            android:layout_marginTop="4dp"
             android:ellipsize="end"
-            android:maxLines="1"
+            android:maxLines="2"
             android:textColor="@color/colorTextSecondary"
-            android:textSize="13sp"
+            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@id/tvClientName"
             app:layout_constraintTop_toBottomOf="@id/tvClientName"
             app:layout_constraintEnd_toStartOf="@id/tvStatus" />
 
+        <!-- Scheduled time -->
         <TextView
             android:id="@+id/tvScheduledTime"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_xs"
-            android:layout_marginBottom="@dimen/spacing_sm"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="14dp"
             android:textColor="@color/colorTextSecondary"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="@id/tvClientName"
@@ -63,17 +69,18 @@
             app:layout_constraintEnd_toStartOf="@id/tvStatus"
             app:layout_constraintBottom_toBottomOf="parent" />
 
+        <!-- Status badge -->
         <TextView
             android:id="@+id/tvStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_sm"
-            android:layout_marginEnd="@dimen/spacing_sm"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="@dimen/spacing_md"
             android:background="@drawable/bg_status_badge"
-            android:paddingStart="@dimen/spacing_sm"
-            android:paddingTop="@dimen/spacing_xs"
-            android:paddingEnd="@dimen/spacing_sm"
-            android:paddingBottom="@dimen/spacing_xs"
+            android:paddingStart="10dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="4dp"
             android:textColor="@color/white"
             android:textSize="12sp"
             android:textStyle="bold"

@@ -32,6 +32,7 @@ public class DeliveryViewModel extends AndroidViewModel {
     private final ApiService apiService;
 
     private final LiveData<List<Delivery>> deliveries;
+    private final MutableLiveData<List<Delivery>> remoteDeliveries = new MutableLiveData<>(new ArrayList<>());
     private final MutableLiveData<Delivery> deliveryDetail = new MutableLiveData<>();
     private final MutableLiveData<List<Delivery>> emergencyResults = new MutableLiveData<>(new ArrayList<>());
     private final MutableLiveData<Boolean> updateSuccess = new MutableLiveData<>(false);
@@ -50,6 +51,10 @@ public class DeliveryViewModel extends AndroidViewModel {
 
     public LiveData<List<Delivery>> getDeliveries() {
         return deliveries;
+    }
+
+    public LiveData<List<Delivery>> getRemoteDeliveries() {
+        return remoteDeliveries;
     }
 
     public LiveData<Delivery> getDeliveryDetail() {
@@ -82,6 +87,27 @@ public class DeliveryViewModel extends AndroidViewModel {
         loadTodayDeliveries(context, null, null);
     }
 
+    public void loadDeliveriesFromApi() {
+        isLoading.setValue(true);
+        apiService.getDeliveries().enqueue(new Callback<List<Delivery>>() {
+            @Override
+            public void onResponse(@NonNull Call<List<Delivery>> call, @NonNull Response<List<Delivery>> response) {
+                isLoading.setValue(false);
+                if (response.isSuccessful() && response.body() != null) {
+                    remoteDeliveries.setValue(response.body());
+                } else {
+                    errorMessage.setValue(getApplication().getString(R.string.error_generic));
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<List<Delivery>> call, @NonNull Throwable t) {
+                isLoading.setValue(false);
+                errorMessage.setValue(getApplication().getString(R.string.error_network));
+            }
+        });
+    }
+
     public void loadDelivery(String id) {
         isLoading.setValue(true);
         apiService.getDelivery(id).enqueue(new Callback<Delivery>() {
@@ -103,14 +129,14 @@ public class DeliveryViewModel extends AndroidViewModel {
         });
     }
 
-    public void updateStatus(String deliveryId, String status) {
+    public void updateStatus(String deliveryId, String status, String notes) {
         if (deliveryId == null || status == null) {
             return;
         }
 
         isLoading.setValue(true);
         updateSuccess.setValue(false);
-        syncRepository.updateStatusLocalFirst(deliveryId, status);
+        syncRepository.updateStatusLocalFirst(deliveryId, status, notes);
         isLoading.setValue(false);
         updateSuccess.setValue(true);
     }
