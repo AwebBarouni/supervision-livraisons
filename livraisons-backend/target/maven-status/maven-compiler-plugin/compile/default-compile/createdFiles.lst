@@ -13,6 +13,7 @@ com\supervision\livraisons\controller\UserController.class
 com\supervision\livraisons\service\SyncService.class
 com\supervision\livraisons\service\MessageService.class
 com\supervision\livraisons\repository\DeliveryRepository.class
+com\supervision\livraisons\controller\EmergencyController.class
 com\supervision\livraisons\controller\SyncController.class
 com\supervision\livraisons\dto\LoginResponse.class
 com\supervision\livraisons\security\JwtAuthFilter.class
@@ -21,6 +22,7 @@ com\supervision\livraisons\service\AuthService.class
 com\supervision\livraisons\model\Message.class
 com\supervision\livraisons\repository\MessageRepository.class
 com\supervision\livraisons\dto\SeedResponse.class
+com\supervision\livraisons\dto\SyncUpdateStatusRequest.class
 com\supervision\livraisons\config\CorsConfig.class
 com\supervision\livraisons\model\Delivery.class
 com\supervision\livraisons\config\WebSocketConfig.class
