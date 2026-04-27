@@ -37,7 +37,7 @@ import okhttp3.WebSocketListener;
 @Singleton
 public class EmergencyWebSocketManager {
 
-    private static final String WS_URL = "ws://127.0.0.1:8082/ws/emergency";
+    private static final String WS_URL = "ws://192.168.1.40:8082/ws/emergency";
     private static final String CHANNEL_ID = "emergency_messages";
     private static final long RECONNECT_DELAY_MS = 5_000;
 

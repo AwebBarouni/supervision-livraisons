@@ -2,6 +2,7 @@ package com.supervision.livraisons.controller;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +13,7 @@ import com.supervision.livraisons.model.Delivery;
 import com.supervision.livraisons.service.SyncService;
 
 @RestController
-@RequestMapping("/api/emergency")
+@RequestMapping("/api/emergency") // ✅ changed to match Android's call
 public class EmergencyController {
 
     private final SyncService syncService;

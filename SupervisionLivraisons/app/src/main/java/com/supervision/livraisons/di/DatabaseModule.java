@@ -27,7 +27,7 @@ public final class DatabaseModule {
     @Singleton
     public static LocalDatabase provideLocalDatabase(@ApplicationContext Context context) {
         return Room.databaseBuilder(context, LocalDatabase.class, "livraisons_local_db")
-                .addMigrations(LocalDatabase.MIGRATION_1_2)
+                .addMigrations(LocalDatabase.MIGRATION_1_2, LocalDatabase.MIGRATION_2_3)
                 .build();
     }
 

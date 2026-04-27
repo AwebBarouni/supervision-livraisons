@@ -24,6 +24,15 @@ import com.supervision.livraisons.service.DeliveryService;
 @RestController
 @RequestMapping("/api/deliveries")
 public class DeliveryController {
+    @GetMapping("/today")
+    public List<Delivery> getToday(Authentication authentication) {
+        String userId = currentUserId(authentication);
+        String role = currentRole(authentication);
+        System.out.println(">>> AUTHORITIES: " + authentication.getAuthorities());
+        System.out.println(">>> ROLE: " + role);
+        System.out.println(">>> USER ID: " + userId);
+        return deliveryService.getTodayDeliveries(userId, role);
+    }
 
     private final DeliveryService deliveryService;
 
@@ -46,8 +55,8 @@ public class DeliveryController {
 
     @PutMapping("/{id}")
     public Delivery updateDelivery(@PathVariable String id,
-                                   @RequestBody Delivery request,
-                                   Authentication authentication) {
+            @RequestBody Delivery request,
+            Authentication authentication) {
         String role = currentRole(authentication);
         return deliveryService.updateDelivery(id, role, request);
     }
@@ -57,13 +66,6 @@ public class DeliveryController {
         String role = currentRole(authentication);
         deliveryService.deleteDelivery(id, role);
         return ResponseEntity.noContent().build();
-    }
-
-    @GetMapping("/today")
-    public List<Delivery> getToday(Authentication authentication) {
-        String userId = currentUserId(authentication);
-        String role = currentRole(authentication);
-        return deliveryService.getTodayDeliveries(userId, role);
     }
 
     @GetMapping("/stats")
@@ -82,8 +84,8 @@ public class DeliveryController {
 
     @PatchMapping("/{id}/status")
     public Delivery updateStatus(@PathVariable String id,
-                                 @RequestBody UpdateStatusRequest request,
-                                 Authentication authentication) {
+            @RequestBody UpdateStatusRequest request,
+            Authentication authentication) {
         String userId = currentUserId(authentication);
         String role = currentRole(authentication);
         return deliveryService.updateStatus(id, userId, role, request);
@@ -106,4 +108,5 @@ public class DeliveryController {
         }
         return "";
     }
+
 }

@@ -134,8 +134,7 @@ public class SyncRepository {
                 deliveryId,
                 toRemoteStatus(localStatus),
                 OffsetDateTime.now().toString(),
-                safeNotes
-        );
+                safeNotes);
 
         apiService.updateStatusViaSync(request).enqueue(new Callback<Delivery>() {
             @Override
@@ -171,8 +170,10 @@ public class SyncRepository {
                     delivery.getAddress(),
                     delivery.getClientPhone(),
                     delivery.getNotes(),
-                    toLocalStatus(delivery.getStatus())
-            ));
+                    toLocalStatus(delivery.getStatus()),
+                    delivery.getLat(), // ✅ added
+                    delivery.getLng(), // ✅ added
+                    delivery.getScheduledTime() != null ? delivery.getScheduledTime().toString() : null));
         }
         return entities;
     }
@@ -192,8 +193,7 @@ public class SyncRepository {
                     message.getId(),
                     message.getSenderId(),
                     message.getContent(),
-                    ts
-            ));
+                    ts));
         }
         return entities;
     }
@@ -213,6 +213,8 @@ public class SyncRepository {
             delivery.setNotes(entity.getNotes());
             delivery.setStatus(toUiStatus(entity.getStatus()));
             deliveries.add(delivery);
+            delivery.setLat(entity.getLat()); // ✅ added
+            delivery.setLng(entity.getLng());
         }
         return deliveries;
     }

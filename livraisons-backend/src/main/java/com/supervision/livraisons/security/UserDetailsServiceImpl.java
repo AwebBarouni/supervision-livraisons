@@ -3,6 +3,8 @@ package com.supervision.livraisons.security;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -25,17 +27,16 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         com.supervision.livraisons.model.User user = userRepository.findById(userId)
                 .orElseThrow(() -> new UsernameNotFoundException("Utilisateur introuvable"));
 
-        List<String> authorities = new ArrayList<>();
+        List<GrantedAuthority> authorities = new ArrayList<>();
         if ("LIVREUR".equalsIgnoreCase(user.getRole())) {
-            authorities.add("ROLE_LIVREUR");
-            authorities.add("ROLE_DRIVER");
+            authorities.add(new SimpleGrantedAuthority("ROLE_LIVREUR"));
         } else {
-            authorities.add("ROLE_" + user.getRole());
+            authorities.add(new SimpleGrantedAuthority("ROLE_" + user.getRole().toUpperCase()));
         }
 
         return User.withUsername(user.getId())
                 .password(user.getPasswordHash())
-                .authorities(authorities.toArray(new String[0]))
+                .authorities(authorities.toArray(new GrantedAuthority[0]))
                 .build();
     }
 }

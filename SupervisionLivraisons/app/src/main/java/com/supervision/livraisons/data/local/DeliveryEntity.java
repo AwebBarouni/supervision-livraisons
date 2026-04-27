@@ -15,14 +15,21 @@ public class DeliveryEntity {
     private String phone;
     private String notes;
     private String status;
+    private Double lat;
+    private Double lng;
+    private String scheduledTime;
 
-    public DeliveryEntity(@NonNull String id, String clientName, String address, String phone, String notes, String status) {
+    public DeliveryEntity(@NonNull String id, String clientName, String address, String phone,
+            String notes, String status, Double lat, Double lng, String scheduledTime) {
         this.id = id;
         this.clientName = clientName;
         this.address = address;
         this.phone = phone;
         this.notes = notes;
         this.status = status;
+        this.lat = lat;
+        this.lng = lng;
+        this.scheduledTime = scheduledTime;
     }
 
     @NonNull
@@ -72,5 +79,29 @@ public class DeliveryEntity {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Double getLat() {
+        return lat;
+    }
+
+    public void setLat(Double lat) {
+        this.lat = lat;
+    }
+
+    public Double getLng() {
+        return lng;
+    }
+
+    public void setLng(Double lng) {
+        this.lng = lng;
+    }
+
+    public String getScheduledTime() {
+        return scheduledTime;
+    }
+
+    public void setScheduledTime(String scheduledTime) {
+        this.scheduledTime = scheduledTime;
     }
 }

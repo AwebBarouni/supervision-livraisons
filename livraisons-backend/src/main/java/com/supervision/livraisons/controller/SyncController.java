@@ -1,5 +1,8 @@
 package com.supervision.livraisons.controller;
 
+import java.util.List;
+
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -33,6 +36,11 @@ public class SyncController {
             return userDetails.getUsername();
         }
         return authentication.getName();
+    }
+
+    @GetMapping("/emergency-messages")
+    public ResponseEntity<List<?>> getEmergencyMessages() {
+        return ResponseEntity.ok(List.of());
     }
 
     private String currentRole(Authentication authentication) {
