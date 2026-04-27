@@ -18,7 +18,6 @@ import com.supervision.livraisons.network.ApiService;
 import com.supervision.livraisons.util.Constants;
 
 import java.io.IOException;
-import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -70,7 +69,7 @@ public class SyncRepository {
         ioExecutor.execute(() -> {
             try {
                 Response<List<Delivery>> response = apiService
-                        .getDailyDeliveries(driverId, LocalDate.now().toString(), lat, lng)
+                        .getTodayDeliveries()
                         .execute();
 
                 if (response.isSuccessful() && response.body() != null) {
@@ -96,9 +95,9 @@ public class SyncRepository {
         }
 
         try {
-            // Background worker has no location — backend returns schedule-ordered list.
+            // Background worker has no location.
             Response<List<Delivery>> response = apiService
-                    .getDailyDeliveries(driverId, LocalDate.now().toString(), null, null)
+                    .getTodayDeliveries()
                     .execute();
 
             if (response.isSuccessful() && response.body() != null) {

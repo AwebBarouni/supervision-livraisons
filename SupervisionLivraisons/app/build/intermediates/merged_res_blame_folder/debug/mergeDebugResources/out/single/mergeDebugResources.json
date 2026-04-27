@@ -1,130 +1,134 @@
 [
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/layout_activity_delivery_detail.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/layout/activity_delivery_detail.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\layout_activity_emergency_message.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\layout\\activity_emergency_message.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/drawable_ic_person.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/drawable/ic_person.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\menu_menu_main.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\menu\\menu_main.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/layout_activity_messaging_screen.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/layout/activity_messaging_screen.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\drawable_bg_status_badge.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\drawable\\bg_status_badge.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/layout_activity_search_screen.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/layout/activity_search_screen.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\layout_activity_update_delivery_status.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\layout\\activity_update_delivery_status.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/menu_menu_main.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/menu/menu_main.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\drawable_ic_delivery_box.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\drawable\\ic_delivery_box.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/layout_activity_emergency_message.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/layout/activity_emergency_message.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\drawable_ic_search.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\drawable\\ic_search.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/layout_item_message_received.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/layout/item_message_received.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\layout_item_conversation.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\layout\\item_conversation.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/drawable_ic_dashboard.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/drawable/ic_dashboard.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\drawable_ic_home.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\drawable\\ic_home.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/drawable_bg_chat_sent.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/drawable/bg_chat_sent.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\drawable_ic_person.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\drawable\\ic_person.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/drawable_ic_search.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/drawable/ic_search.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\drawable_ic_phone.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\drawable\\ic_phone.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/layout_activity_update_delivery_status.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/layout/activity_update_delivery_status.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\layout_activity_conversation.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\layout\\activity_conversation.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/drawable/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\drawable_bg_chat_sent.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\drawable\\bg_chat_sent.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/drawable_ic_home.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/drawable/ic_home.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\layout_activity_messaging_screen.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\layout\\activity_messaging_screen.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/layout_activity_controleur_dashboard.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/layout/activity_controleur_dashboard.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\layout_activity_controleur_dashboard.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\layout\\activity_controleur_dashboard.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/layout_item_message_sent.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/layout/item_message_sent.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\layout\\activity_login.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/drawable_bg_status_badge.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/drawable/bg_status_badge.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/layout_activity_user_profile.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/layout/activity_user_profile.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\menu_bottom_nav_controleur.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\menu\\bottom_nav_controleur.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\layout_item_message_sent.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\layout\\item_message_sent.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/menu_bottom_nav_controleur.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/menu/bottom_nav_controleur.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\layout_activity_all_deliveries.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\layout\\activity_all_deliveries.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/drawable_ic_phone.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/drawable/ic_phone.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\layout_item_delivery.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\layout\\item_delivery.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/layout_item_delivery.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/layout/item_delivery.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\layout_activity_user_profile.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\layout\\activity_user_profile.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/layout_activity_todays_deliveries.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/layout/activity_todays_deliveries.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\layout_item_message_received.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\layout\\item_message_received.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/drawable_ic_message.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/drawable/ic_message.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\drawable_ic_warning.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\drawable\\ic_warning.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/layout_activity_conversation.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/layout/activity_conversation.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\drawable_ic_message.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\drawable\\ic_message.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/layout_item_conversation.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/layout/item_conversation.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\layout_activity_search_screen.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\layout\\activity_search_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\layout_activity_todays_deliveries.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\layout\\activity_todays_deliveries.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\drawable\\ic_launcher_foreground.xml"
     },
     {
         "merged": "com.supervision.livraisons.app-debug-56:/layout_activity_login.xml.flat",
         "source": "com.supervision.livraisons.app-main-58:/layout/activity_login.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/drawable_bg_chat_received.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/drawable/bg_chat_received.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\drawable_bg_chat_received.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\drawable\\bg_chat_received.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/drawable_ic_warning.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/drawable/ic_warning.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\layout_activity_delivery_detail.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\layout\\activity_delivery_detail.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/layout_activity_all_deliveries.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/layout/activity_all_deliveries.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\drawable_ic_dashboard.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\drawable\\ic_dashboard.xml"
     },
     {
-        "merged": "com.supervision.livraisons.app-debug-56:/drawable_ic_delivery_box.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/drawable/ic_delivery_box.xml"
-    },
-    {
-        "merged": "com.supervision.livraisons.app-debug-56:/menu_bottom_nav_livreur.xml.flat",
-        "source": "com.supervision.livraisons.app-main-58:/menu/bottom_nav_livreur.xml"
+        "merged": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-debug-56:\\menu_bottom_nav_livreur.xml.flat",
+        "source": "C:\\Users\\MSI\\.gradle\\daemon\\8.11.1\\com.supervision.livraisons.app-main-58:\\menu\\bottom_nav_livreur.xml"
     }
 ]

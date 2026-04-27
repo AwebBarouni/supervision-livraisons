@@ -14,6 +14,11 @@ public final class SessionManager {
     }
 
     public static void saveSession(Context context, String token, String userId, String name, String role) {
+        String previousUserId = getUserId(context);
+        if (!TextUtils.isEmpty(previousUserId) && !previousUserId.equals(userId)) {
+            context.deleteDatabase("livraisons_local_db");
+        }
+
         prefs(context).edit()
                 .putString(Constants.KEY_TOKEN, token)
                 .putString(Constants.KEY_USER_ID, userId)
@@ -45,5 +50,6 @@ public final class SessionManager {
 
     public static void clearSession(Context context) {
         prefs(context).edit().clear().apply();
+        context.deleteDatabase("livraisons_local_db");
     }
 }

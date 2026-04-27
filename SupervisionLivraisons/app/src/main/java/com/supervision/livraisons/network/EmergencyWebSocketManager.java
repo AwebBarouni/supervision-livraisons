@@ -18,6 +18,7 @@ import com.google.gson.Gson;
 import com.supervision.livraisons.data.local.MessageDao;
 import com.supervision.livraisons.data.local.MessageEntity;
 import com.supervision.livraisons.model.Message;
+import com.supervision.livraisons.util.Constants;
 
 import java.util.Collections;
 import java.util.concurrent.ExecutorService;
@@ -36,7 +37,7 @@ import okhttp3.WebSocketListener;
 @Singleton
 public class EmergencyWebSocketManager {
 
-    private static final String WS_URL = "ws://10.0.2.2:8081/ws/emergency";
+    private static final String WS_URL = "ws://127.0.0.1:8082/ws/emergency";
     private static final String CHANNEL_ID = "emergency_messages";
     private static final long RECONNECT_DELAY_MS = 5_000;
 
@@ -52,8 +53,8 @@ public class EmergencyWebSocketManager {
 
     @Inject
     public EmergencyWebSocketManager(OkHttpClient okHttpClient,
-                                     MessageDao messageDao,
-                                     @ApplicationContext Context context) {
+            MessageDao messageDao,
+            @ApplicationContext Context context) {
         this.okHttpClient = okHttpClient;
         this.messageDao = messageDao;
         this.context = context;
@@ -101,15 +102,15 @@ public class EmergencyWebSocketManager {
 
     private void handleIncomingMessage(String json) {
         Message message = gson.fromJson(json, Message.class);
-        if (message == null || TextUtils.isEmpty(message.getId())) return;
+        if (message == null || TextUtils.isEmpty(message.getId()))
+            return;
 
         dbExecutor.execute(() -> {
             MessageEntity entity = new MessageEntity(
                     message.getId(),
                     message.getSenderId(),
                     message.getContent(),
-                    message.getTimestamp()
-            );
+                    message.getTimestamp());
             messageDao.insertMessages(Collections.singletonList(entity));
         });
 
@@ -117,7 +118,8 @@ public class EmergencyWebSocketManager {
     }
 
     private void scheduleReconnect() {
-        if (intentionalClose) return;
+        if (intentionalClose)
+            return;
         reconnectHandler.postDelayed(this::openConnection, RECONNECT_DELAY_MS);
     }
 
@@ -130,8 +132,8 @@ public class EmergencyWebSocketManager {
                 .setAutoCancel(true);
 
         NotificationManagerCompat manager = NotificationManagerCompat.from(context);
-        if (ActivityCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS)
-                == PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(context,
+                Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED) {
             manager.notify((int) System.currentTimeMillis(), builder.build());
         }
     }
@@ -140,8 +142,7 @@ public class EmergencyWebSocketManager {
         NotificationChannel channel = new NotificationChannel(
                 CHANNEL_ID,
                 "Messages d'urgence",
-                NotificationManager.IMPORTANCE_HIGH
-        );
+                NotificationManager.IMPORTANCE_HIGH);
         channel.setDescription("Alertes d'urgence de la supervision");
         NotificationManager manager = context.getSystemService(NotificationManager.class);
         if (manager != null) {

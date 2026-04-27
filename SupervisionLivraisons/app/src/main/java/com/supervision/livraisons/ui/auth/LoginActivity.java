@@ -51,8 +51,7 @@ public class LoginActivity extends AppCompatActivity {
                     response.getToken(),
                     response.getUserId(),
                     response.getName(),
-                    response.getRole()
-            );
+                    response.getRole());
 
             routeByRole(response.getRole());
             finish();

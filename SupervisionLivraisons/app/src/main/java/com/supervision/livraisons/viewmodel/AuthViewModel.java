@@ -42,6 +42,7 @@ public class AuthViewModel extends AndroidViewModel {
 
     public void login(Context context, String email, String password) {
         isLoading.setValue(true);
+        String baseUrl = Constants.getBaseUrl(context);
         ApiClient.getInstance(context).login(new LoginRequest(email, password)).enqueue(new Callback<LoginResponse>() {
             @Override
             public void onResponse(@NonNull Call<LoginResponse> call, @NonNull Response<LoginResponse> response) {
@@ -51,7 +52,8 @@ public class AuthViewModel extends AndroidViewModel {
                 } else if (response.code() == 401) {
                     errorMessage.setValue(getApplication().getString(R.string.error_login));
                 } else {
-                    errorMessage.setValue(getApplication().getString(R.string.error_network));
+                    errorMessage.setValue(getApplication().getString(R.string.error_network)
+                            + " (HTTP " + response.code() + " | " + baseUrl + ")");
                 }
             }
 
@@ -60,11 +62,11 @@ public class AuthViewModel extends AndroidViewModel {
                 isLoading.setValue(false);
                 String detail = t.getLocalizedMessage();
                 if (detail == null || detail.isBlank()) {
-                    errorMessage.setValue(getApplication().getString(R.string.error_network) + " (" + Constants.BASE_URL + ")");
+                    errorMessage.setValue(getApplication().getString(R.string.error_network) + " (" + baseUrl + ")");
                     return;
                 }
                 errorMessage.setValue(getApplication().getString(R.string.error_network)
-                        + " (" + Constants.BASE_URL + " | " + detail + ")");
+                        + " (" + baseUrl + " | " + detail + ")");
             }
         });
     }

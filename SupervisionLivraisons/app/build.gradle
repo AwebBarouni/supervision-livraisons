@@ -7,6 +7,11 @@ android {
     namespace 'com.supervision.livraisons'
     compileSdk 34
 
+    def backendHostProp = project.findProperty("backendHost")
+    def backendHost = (backendHostProp != null && backendHostProp.toString().trim())
+            ? backendHostProp.toString().trim()
+            : ""
+
     defaultConfig {
         applicationId "com.supervision.livraisons"
         minSdk 26
@@ -14,6 +19,9 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "BACKEND_HOST", "\"${backendHost}\""
+        buildConfigField "int", "BACKEND_PORT", "8082"
 
         // Add this to exclude Kotlin metadata files from META-INF
         javaCompileOptions {
@@ -36,6 +44,7 @@ android {
     }
 
     buildFeatures {
+        buildConfig true
         viewBinding true
     }
 

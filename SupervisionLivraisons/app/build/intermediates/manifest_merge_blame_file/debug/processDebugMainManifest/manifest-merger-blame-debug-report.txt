@@ -9,20 +9,20 @@
 9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:5:5-66
-11-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:5:22-64
+11-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:4:5-66
+11-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:4:22-64
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:6:5-78
-12-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:6:22-76
+12-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:5:5-78
+12-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:5:22-76
 13    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-13-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:7:5-76
-13-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:7:22-74
+13-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:6:5-76
+13-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:6:22-74
 14    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-14-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:8:5-78
-14-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:8:22-76
+14-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:7:5-78
+14-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:7:22-76
 15    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-15-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:9:5-80
-15-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:9:22-78
+15-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:8:5-80
+15-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:8:22-78
 16
 17    <uses-feature
 17-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\MSI\.gradle\caches\8.11.1\transforms\66d73c5a3d2f72e78b95dbcd94425bf7\transformed\play-services-maps-18.2.0\AndroidManifest.xml:26:5-28:35
@@ -62,116 +62,116 @@
 35-->[androidx.core:core:1.13.0] C:\Users\MSI\.gradle\caches\8.11.1\transforms\9463649d11e16760927952211000d427\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
 36
 37    <application
-37-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:11:5-46:19
+37-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:10:5-45:19
 38        android:name="com.supervision.livraisons.SupervisionLivraisonsApp"
-38-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:12:9-75
+38-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:11:9-75
 39        android:allowBackup="true"
-39-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:13:9-35
+39-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:12:9-35
 40        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 40-->[androidx.core:core:1.13.0] C:\Users\MSI\.gradle\caches\8.11.1\transforms\9463649d11e16760927952211000d427\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
 41        android:debuggable="true"
 42        android:enableOnBackInvokedCallback="true"
-42-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:20:9-51
+42-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:19:9-51
 43        android:extractNativeLibs="false"
 44        android:icon="@mipmap/ic_launcher"
-44-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:14:9-43
+44-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:13:9-43
 45        android:label="@string/app_name"
-45-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:15:9-41
+45-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:14:9-41
 46        android:roundIcon="@mipmap/ic_launcher_round"
-46-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:16:9-54
+46-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:15:9-54
 47        android:supportsRtl="true"
-47-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:17:9-35
+47-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:16:9-35
 48        android:testOnly="true"
 49        android:theme="@style/Theme.SupervisionLivraisons"
-49-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:18:9-59
+49-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:17:9-59
 50        android:usesCleartextTraffic="true" >
-50-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:19:9-44
+50-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:18:9-44
 51        <meta-data
-51-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:22:9-24:55
+51-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:21:9-23:55
 52            android:name="com.google.android.geo.API_KEY"
-52-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:23:13-58
+52-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:22:13-58
 53            android:value="YOUR_GOOGLE_MAPS_API_KEY" />
-53-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:24:13-53
+53-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:23:13-53
 54
 55        <activity
-55-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:26:9-34:20
+55-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:25:9-33:20
 56            android:name="com.supervision.livraisons.ui.auth.LoginActivity"
-56-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:27:13-76
+56-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:26:13-76
 57            android:exported="true"
-57-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:28:13-36
+57-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:27:13-36
 58            android:windowSoftInputMode="adjustResize" >
-58-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:29:13-55
+58-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:28:13-55
 59            <intent-filter>
-59-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:30:13-33:29
+59-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:29:13-32:29
 60                <action android:name="android.intent.action.MAIN" />
-60-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:31:17-68
-60-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:31:25-66
+60-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:30:17-68
+60-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:30:25-66
 61
 62                <category android:name="android.intent.category.LAUNCHER" />
-62-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:32:17-76
-62-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:32:27-74
+62-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:31:17-76
+62-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:31:27-74
 63            </intent-filter>
 64        </activity>
 65        <activity
-65-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:36:9-123
+65-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:35:9-123
 66            android:name="com.supervision.livraisons.ui.livreur.TodaysDeliveriesActivity"
-66-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:36:19-96
+66-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:35:19-96
 67            android:exported="false" />
-67-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:36:97-121
+67-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:35:97-121
 68        <activity
-68-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:37:9-120
+68-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:36:9-120
 69            android:name="com.supervision.livraisons.ui.livreur.AllDeliveriesActivity"
-69-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:37:19-93
+69-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:36:19-93
 70            android:exported="false" />
-70-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:37:94-118
+70-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:36:94-118
 71        <activity
-71-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:38:9-121
+71-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:37:9-121
 72            android:name="com.supervision.livraisons.ui.livreur.DeliveryDetailActivity"
-72-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:38:19-94
+72-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:37:19-94
 73            android:exported="false" />
-73-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:38:95-119
+73-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:37:95-119
 74        <activity
-74-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:39:9-127
+74-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:38:9-127
 75            android:name="com.supervision.livraisons.ui.livreur.UpdateDeliveryStatusActivity"
-75-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:39:19-100
+75-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:38:19-100
 76            android:exported="false" />
-76-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:39:101-125
+76-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:38:101-125
 77        <activity
-77-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:40:9-119
+77-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:39:9-119
 78            android:name="com.supervision.livraisons.ui.livreur.SearchScreenActivity"
-78-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:40:19-92
+78-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:39:19-92
 79            android:exported="false" />
-79-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:40:93-117
+79-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:39:93-117
 80        <activity
-80-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:41:9-129
+80-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:40:9-129
 81            android:name="com.supervision.livraisons.ui.controleur.ControleurDashboardActivity"
-81-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:41:19-102
+81-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:40:19-102
 82            android:exported="false" />
-82-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:41:103-127
+82-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:40:103-127
 83        <activity
-83-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:42:9-126
+83-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:41:9-126
 84            android:name="com.supervision.livraisons.ui.controleur.EmergencyMessageActivity"
-84-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:42:19-99
+84-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:41:19-99
 85            android:exported="false" />
-85-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:42:100-124
+85-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:41:100-124
 86        <activity
-86-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:43:9-124
+86-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:42:9-124
 87            android:name="com.supervision.livraisons.ui.messaging.MessagingScreenActivity"
-87-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:43:19-97
+87-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:42:19-97
 88            android:exported="false" />
-88-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:43:98-122
+88-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:42:98-122
 89        <activity
-89-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:44:9-121
+89-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:43:9-121
 90            android:name="com.supervision.livraisons.ui.messaging.ConversationActivity"
-90-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:44:19-94
+90-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:43:19-94
 91            android:exported="false" />
-91-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:44:95-119
+91-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:43:95-119
 92        <activity
-92-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:45:9-118
+92-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:44:9-118
 93            android:name="com.supervision.livraisons.ui.profile.UserProfileActivity"
-93-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:45:19-91
+93-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:44:19-91
 94            android:exported="false" />
-94-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:45:92-116
+94-->C:\Users\MSI\Desktop\supervision livraisons\SupervisionLivraisons\app\src\main\AndroidManifest.xml:44:92-116
 95        <!-- Needs to be explicitly declared on P+ -->
 96        <uses-library
 96-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\MSI\.gradle\caches\8.11.1\transforms\66d73c5a3d2f72e78b95dbcd94425bf7\transformed\play-services-maps-18.2.0\AndroidManifest.xml:39:9-41:40

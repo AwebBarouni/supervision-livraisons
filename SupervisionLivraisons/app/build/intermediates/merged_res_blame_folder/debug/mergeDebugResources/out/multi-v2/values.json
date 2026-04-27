@@ -204,12 +204,9 @@
                 {
                     "source": "C:\\Users\\MSI\\Desktop\\supervision livraisons\\SupervisionLivraisons\\app\\src\\main\\res\\values\\themes.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "57",
-                        "endLines": "12",
-                        "endColumns": "12",
-                        "endOffsets": "784"
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
                     },
                     "to": {
                         "startLines": "6704",

@@ -14,14 +14,16 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public final class ApiClient {
 
     private static Retrofit instance;
+    private static String activeBaseUrl;
 
     private ApiClient() {
     }
 
     public static ApiService getInstance(Context context) {
-        if (instance == null) {
+        String baseUrl = Constants.getBaseUrl(context.getApplicationContext());
+        if (instance == null || !baseUrl.equals(activeBaseUrl)) {
             synchronized (ApiClient.class) {
-                if (instance == null) {
+                if (instance == null || !baseUrl.equals(activeBaseUrl)) {
                     HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
                     loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
 
@@ -34,13 +36,21 @@ public final class ApiClient {
                             .build();
 
                     instance = new Retrofit.Builder()
-                            .baseUrl(Constants.BASE_URL)
+                            .baseUrl(baseUrl)
                             .addConverterFactory(GsonConverterFactory.create())
                             .client(okHttpClient)
                             .build();
+                    activeBaseUrl = baseUrl;
                 }
             }
         }
         return instance.create(ApiService.class);
+    }
+
+    public static void reset() {
+        synchronized (ApiClient.class) {
+            instance = null;
+            activeBaseUrl = null;
+        }
     }
 }
