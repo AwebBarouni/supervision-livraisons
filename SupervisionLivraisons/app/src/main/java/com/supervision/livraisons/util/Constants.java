@@ -7,7 +7,7 @@ import com.supervision.livraisons.BuildConfig;
 
 public final class Constants {
 
-    public static final String HOST_DEVICE_USB = "192.168.1.40";
+    public static final String HOST_DEVICE_USB = "127.0.0.1";
     public static final String HOST_EMULATOR = "10.0.2.2";
     public static final String PREF_NAME = "SupervisionPrefs";
     public static final String KEY_TOKEN = "jwt_token";
